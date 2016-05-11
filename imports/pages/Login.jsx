@@ -5,7 +5,7 @@ const center = {
   display: 'flex',
   alignItems: 'center',
   flexFlow: 'column',
-  height: '70%',
+  height: '75%',
   borderRadius: '2px',
   backgroundColor: 'rgba(250,250,250,0.8)',
 };
@@ -40,7 +40,7 @@ const colorTextRegisterAndForget = {
 };
 const sizeImg = {
   marginTop: '2em',
-  width: '6em',
+  width: '7em',
   height: 'auto',
 };
 const styleSignupButton = {
