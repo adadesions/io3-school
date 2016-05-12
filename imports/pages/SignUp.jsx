@@ -5,7 +5,7 @@ const center = {
   display: 'flex',
   alignItems: 'center',
   flexFlow: 'column',
-  height: '80%',
+  height: '85%',
   borderRadius: '2px',
   backgroundColor: 'rgba(250,250,250,0.8)',
 };
@@ -44,7 +44,7 @@ const colorTextRegisterAndForget = {
   color: '#9E9E9E'
 };
 const sizeImg = {
-  marginTop: '2em',
+  marginTop: '1em',
   width: '6em',
   height: 'auto',
 };
@@ -87,8 +87,8 @@ export default class SignUp extends React.Component {
         </div>
         <form style={center} className="col l4 z-depth-1">
           <div className="row">
-            <div style={sizeImg}>
-              <img src="/images/login/logo.png"/>
+            <div>
+              <img style={sizeImg} src="/images/login/logo.png"/>
             </div>
           </div>
           <div className="row">

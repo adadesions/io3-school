@@ -6,7 +6,7 @@ const colorNav = {
 }
 const sizeImg = {
   paddingLeft: '0.2em',
-  paddingBottom: '0.15em',
+  paddingTop: '0.13em',
   width: '2em',
   height: 'auto',
 };

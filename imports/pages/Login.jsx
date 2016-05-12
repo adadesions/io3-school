@@ -39,8 +39,8 @@ const colorTextRegisterAndForget = {
   color: '#9E9E9E'
 };
 const sizeImg = {
-  marginTop: '2em',
-  width: '7em',
+  marginTop: '1em',
+  width: '6em',
   height: 'auto',
 };
 const styleSignupButton = {
@@ -81,8 +81,8 @@ export default class Login extends React.Component {
         </div>
         <form style={center} className="col l4 z-depth-1">
           <div className="row">
-            <div style={sizeImg}>
-              <img src="/images/login/logo.png"/>
+            <div>
+              <img style={sizeImg} src="/images/login/logo.png"/>
             </div>
           </div>
           <div className="row">
@@ -113,7 +113,7 @@ export default class Login extends React.Component {
           </div>
           <div style={justifyCenter} className="row">
             <div style={floatLeft} className="input-field col l6">
-              <a><h4>Forgot Password ?</h4></a>
+              <a><h6>Forgot Password ?</h6></a>
             </div>
             <div style={floatRight} className="input-field col l6">
               <a style={styleSignupButton}

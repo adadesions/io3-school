@@ -19,4 +19,4 @@ ecmascript              # Enable ECMAScript2015+ syntax in app code
 kadira:flow-router
 react-meteor-data
 poetic:materialize-scss
-coffeejesus:uikit-complete
+fourseven:scss
