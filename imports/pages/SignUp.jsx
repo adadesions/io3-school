@@ -125,8 +125,8 @@ export default class SignUp extends React.Component {
                 type="button"
                 style={sizeBotton}
                 className="waves-effect waves-light btn"
-              >GO !!!
-            </button>
+              >Let's Rock!
+              </button>
             <button
               type="button"
               style={sizeBottonCancel}
