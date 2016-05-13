@@ -27,7 +27,7 @@ FlowRouter.route('/SignUp', {
   },
 });
 
-FlowRouter.route('/AdacodeSchool', {
+FlowRouter.route('/school', {
   name: 'mainpage',
   action() {
     mount(Container, {

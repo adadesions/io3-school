@@ -67,6 +67,7 @@ const floatLeft = {
   display: 'flex',
   justifyContent: 'flex-start',
 }
+
 export default class Login extends React.Component {
 
   onClickSignup() {
@@ -102,11 +103,14 @@ export default class Login extends React.Component {
           <div style={sizeBoxBotton} className="row">
             <div className="input-field col l12">
               <button
+                type="button"
                 style={sizeBotton}
                 className="waves-effect waves-light btn"
               >Login
             </button>
-            <button style={styleBtnFacebook} className="waves-effect waves-light btn">
+            <button
+              type="button"
+              style={styleBtnFacebook} className="waves-effect waves-light btn">
               <i className="uk-icon-facebook left"></i>Facebook
             </button>
             </div>
@@ -116,7 +120,8 @@ export default class Login extends React.Component {
               <a><h6>Forgot Password ?</h6></a>
             </div>
             <div style={floatRight} className="input-field col l6">
-              <a style={styleSignupButton}
+              <a
+                 style={styleSignupButton}
                  className="btn-floating btn-large waves-effect waves-light blue"
                  onClick={this.onClickSignup}
               >

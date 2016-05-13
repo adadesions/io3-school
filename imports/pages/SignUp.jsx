@@ -122,11 +122,13 @@ export default class SignUp extends React.Component {
           <div style={sizeBoxBotton} className="row">
             <div className="input-field col l12">
               <button
+                type="button"
                 style={sizeBotton}
                 className="waves-effect waves-light btn"
-              >GO !!!
-            </button>
+              >Let's Rock!
+              </button>
             <button
+              type="button"
               style={sizeBottonCancel}
               className="waves-effect waves-light btn"
               onClick={this.onClickBack}
