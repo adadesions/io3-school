@@ -1,16 +1,34 @@
 import React from 'react';
+import { FlowRouter } from 'meteor/kadira:flow-router';
 
+const styleCard = {
+  height: '190px',
+}
+const styleButton = {
+  display: 'flex',
+  justifyContent: 'center',
+}
+const styleTumbnail = {
+  height: '7.6em',
+}
 export default class Items extends React.Component {
+
+  onClickPlay(){
+    FlowRouter.go('player');
+  }
+
   render() {
     return (
-          <div className="col m4">
-            <div className="card small">
+          <div className="col m4 tumbnail-items">
+            <div style={styleCard} className="card small">
               <div className="card-image waves-effect waves-block waves-light">
-                <img className="activator" src="images/navigator/avatar.png"/>
+                <img style={styleTumbnail} className="activator" src="images/navigator/avatar.png"/>
               </div>
-              <div className="card-content">
+              <div className="card-content detail-tumbnail">
                 <span className="card-title activator grey-text text-darken-4">Card Title<i className="material-icons right">more_vert</i></span>
-                <p><a href="#">This is a link</a></p>
+                <p style={styleButton}>
+                  <a onClick={this.onClickPlay} className="btn-floating btn-small waves-effect waves-light red"><i className="material-icons">add</i></a>
+                </p>
               </div>
               <div className="card-reveal">
                 <span className="card-title grey-text text-darken-4">Card Title<i className="material-icons right">close</i></span>

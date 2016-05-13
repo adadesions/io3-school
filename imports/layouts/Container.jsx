@@ -2,10 +2,6 @@ import React from 'react';
 
 import Navigator from '../ui/components/navBar/Navigator.jsx';
 
-const spaceNav = {
-  marginTop: '5em',
-}
-
 export default class Container extends React.Component{
   // mixins: [ReactMeteorData],
 
@@ -13,7 +9,7 @@ export default class Container extends React.Component{
     return(
       <div>
         <Navigator />
-        <br/><br/><br/>
+        <br/><br/><br/>  
         {this.props.content}
       </div>
     )

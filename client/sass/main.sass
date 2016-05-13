@@ -1,6 +1,8 @@
 @font-face
   font-family: Quark
   src: url('/fonts/Quark-LightBold/Quark-Light.otf') format("truetype")
+html
+  background: #F1F1F1
 div
   font-family: Quark , verdana, helvetica, sans-serif
 nav
@@ -9,8 +11,37 @@ nav
 .row.main-page
   .col
     padding: 0
+.row.main-page
+  .col.tumbnail-items
+    padding-left: 1em
+    padding-right: 1em
 .slider
   height: 38.3em !important
   margin-bottom: 1em
 .slides
   height: 34em !important
+.row
+  .col.videos-detail
+    padding: 0.6rem 0.3rem
+.row
+  .col.videos-relates
+    padding: 0.6rem 0.3rem
+.row
+  .col.tumbnail-relates
+    padding: 0 0.1rem
+.card
+  .card-content.detail-tumbnail
+    padding: 0
+    span
+      padding-left: 0.3em
+      padding-right: 0.3em
+      i
+        padding-top: 0.1em
+    .card-title
+      line-height: 34px
+    .btn-floating
+      -webkit-box-shadow: 0px 0px 2px 0px rgba(189,187,189,1)
+      -moz-box-shadow: 0px 0px 2px 0px rgba(189,187,189,1)
+      box-shadow: 0px 0px 2px 0px rgba(189,187,189,1)
+.divider
+  margin-bottom: 0.4em

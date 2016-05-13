@@ -7,6 +7,7 @@ import LoginContainer from '../../imports/layouts/LoginContainer.jsx'
 import Login from '../../imports/pages/Login.jsx';
 import SignUp from '../../imports/pages/SignUp.jsx';
 import MainPage from '../../imports/pages/MainPage.jsx';
+import Player from '../../imports/pages/Player.jsx';
 
 FlowRouter.route('/', {
   name: 'root',
@@ -31,6 +32,15 @@ FlowRouter.route('/AdacodeSchool', {
   action() {
     mount(Container, {
       content: <MainPage />,
+    });
+  },
+});
+
+FlowRouter.route('/Player', {
+  name: 'player',
+  action() {
+    mount(Container, {
+      content: <Player />,
     });
   },
 });

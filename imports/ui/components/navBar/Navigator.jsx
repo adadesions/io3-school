@@ -25,7 +25,7 @@ export default class Navigator extends React.Component {
     return (
       <nav style={styleNav} id="navigator">
         <div style={colorNav} className="nav-wrapper">
-          <a href="#" className="brand-logo brand-ada"><img style={sizeImg} src="/images/login/logo2.png"/></a>
+          <a href="#" className="brand-logo brand-ada"><img style={sizeImg} src="/images/navigator/logo2.png"/></a>
           <Menu />
 
           <Avatar/>

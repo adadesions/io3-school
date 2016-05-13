@@ -6,11 +6,11 @@ import LeftContent from '../ui/components/mainPage/leftContent/LeftContent.jsx';
 const leftContent = {
   position: 'fixed',
   marginTop: '-0.2em',
+  backgroundColor: '#fff',
 }
 const rightContent = {
   marginLeft: '25%',
   marginTop: '0.1em',
-  backgroundColor: '#F1F1F1',
   display: 'flex',
   justifyContent: 'center',
   paddingTop: '1em',
@@ -48,13 +48,13 @@ export default class MainPage extends React.Component {
         <div style={rightContent} className="col m9">
           <div style={container} className="z-depth-1">
             <div style={styleRow} className="row">
-              <h3 style={styleHeader}>Free</h3>
-              <hr/>
+              <h4 style={styleHeader}>Free</h4>
+              <div className="divider"></div>
               <Items />
             </div>
             <div style={styleRow} className="row">
-              <h3 style={styleHeader}>Advance</h3>
-              <hr/>
+              <h4 style={styleHeader}>Advance</h4>
+              <div className="divider"></div>
               <Items />
             </div>
           </div>
