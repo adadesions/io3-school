@@ -3,7 +3,7 @@ import React from 'react';
 export default class Items extends React.Component {
   render() {
     return (
-          <div className="col m3">
+          <div className="col m4">
             <div className="card small">
               <div className="card-image waves-effect waves-block waves-light">
                 <img className="activator" src="images/navigator/avatar.png"/>

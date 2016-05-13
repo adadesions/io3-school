@@ -2,6 +2,9 @@ import React from 'react';
 
 import ItemImgSlide from './ItemImgSlide.jsx';
 
+const marginSlide = {
+  marginTop: '1.2em',
+}
 const styleList = {
   paddingLeft: 'none',
 }

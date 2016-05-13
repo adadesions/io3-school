@@ -5,7 +5,7 @@ const center = {
   display: 'flex',
   alignItems: 'center',
   flexFlow: 'column',
-  height: '75%',
+  height: '80%',
   borderRadius: '2px',
   backgroundColor: 'rgba(250,250,250,0.8)',
 };
@@ -39,7 +39,7 @@ const colorTextRegisterAndForget = {
   color: '#9E9E9E'
 };
 const sizeImg = {
-  marginTop: '1em',
+  marginTop: '2.5em',
   width: '6em',
   height: 'auto',
 };

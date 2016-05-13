@@ -44,7 +44,7 @@ const colorTextRegisterAndForget = {
   color: '#9E9E9E'
 };
 const sizeImg = {
-  marginTop: '1em',
+  marginTop: '1.5em',
   width: '6em',
   height: 'auto',
 };

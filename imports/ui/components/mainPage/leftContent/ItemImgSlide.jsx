@@ -1,8 +1,8 @@
 import React from 'react';
 
 const listImgSlide = {
-  width: '20em',
-  height: '16em',
+  width: '21.45em',
+  height: '35em',
 }
 
 export default class ItemImgSlide extends React.Component {
