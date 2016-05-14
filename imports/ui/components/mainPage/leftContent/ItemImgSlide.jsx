@@ -1,10 +1,5 @@
 import React from 'react';
 
-const listImgSlide = {
-  width: '21.45em',
-  height: '35em',
-}
-
 export default class ItemImgSlide extends React.Component {
   render() {
     return (
