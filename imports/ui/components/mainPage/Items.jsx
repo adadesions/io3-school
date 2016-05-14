@@ -2,7 +2,7 @@ import React from 'react';
 import { FlowRouter } from 'meteor/kadira:flow-router';
 
 const styleCard = {
-  height: '200px',
+  height: '210px',
 }
 const styleButton = {
   display: 'flex',
@@ -10,10 +10,6 @@ const styleButton = {
 }
 const styleTumbnail = {
   height: '7.6em',
-}
-const styleCardImg = {
-  height: '7.6em',
-  width: 'auto',
 }
 export default class Items extends React.Component {
 
@@ -23,9 +19,9 @@ export default class Items extends React.Component {
 
   render() {
     return (
-          <div className="col m4 tumbnail-items">
+          <div className="col m3 tumbnail-items">
             <div style={styleCard} className="card small">
-              <div style={styleCardImg} className="card-image waves-effect waves-block waves-light">
+              <div className="card-image waves-effect waves-block waves-light radius-img">
                 <img style={styleTumbnail} className="activator" src="images/mainPage/tumbnail2.png"/>
               </div>
               <div className="card-content detail-tumbnail">

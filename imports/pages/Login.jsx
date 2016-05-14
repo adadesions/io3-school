@@ -1,14 +1,6 @@
 import React from 'react';
 import { FlowRouter } from 'meteor/kadira:flow-router';
 
-const center = {
-  display: 'flex',
-  alignItems: 'center',
-  flexFlow: 'column',
-  height: '80%',
-  borderRadius: '2px',
-  backgroundColor: 'rgba(250,250,250,0.8)',
-};
 const sizeFormLogin = {
   width: '90%',
 };
@@ -46,12 +38,6 @@ const sizeImg = {
   width: '6em',
   height: 'auto',
 };
-const styleSignupButton = {
-  marginRight: '-4.3em',
-  marginBottom: '-4.5em',
-  width: '6em',
-  height: '6em',
-};
 const sizeIcon = {
   fontSize: '3em',
   lineHeight: '2em',
@@ -83,7 +69,7 @@ export default class Login extends React.Component {
         <div className="col l4">
           <br/>
         </div>
-        <form style={center} className="col l4 z-depth-1">
+        <form className="col l4 style-form-login z-depth-1">
           <div className="row">
             <div>
               <img style={sizeImg} src="/images/login/logo.png"/>
@@ -124,8 +110,7 @@ export default class Login extends React.Component {
             </div>
             <div style={floatRight} className="input-field col l6">
               <a
-                 style={styleSignupButton}
-                 className="btn-floating btn-large waves-effect waves-light blue"
+                 className="btn-floating btn-large waves-effect waves-light blue style-signup-button"
                  onClick={this.onClickSignup}
               >
                 <i style={sizeIcon} className="material-icons">add</i>
