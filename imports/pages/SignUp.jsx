@@ -15,11 +15,13 @@ const sizeBoxBotton = {
 const sizeBotton = {
   width: '100%',
   backgroundColor: '#004064',
+  fontWeight: 'bold',
 };
 const sizeBottonCancel = {
   width: '100%',
   backgroundColor: '#b71c1c ',
   marginTop: '0.5em',
+  fontWeight: 'bold',
 };
 const alignCenter = {
   display: 'flex',

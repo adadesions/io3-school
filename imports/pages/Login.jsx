@@ -10,6 +10,7 @@ const sizeBoxBotton = {
 const sizeBotton = {
   width: '100%',
   backgroundColor: '#004064',
+  fontWeight: 'bold',
 };
 const alignCenter = {
   display: 'flex',
@@ -48,6 +49,7 @@ const styleBtnFacebook = {
   justifyContent: 'center',
   marginTop: '0.5em',
   backgroundColor: '#43609C',
+  fontWeight: 'bold',
 }
 const styleBtnForget = {
   width: '100%',
@@ -56,7 +58,9 @@ const floatLeft = {
   display: 'flex',
   justifyContent: 'flex-start',
 }
-
+const spaceIcon = {
+  marginRight: '0.5em',
+}
 export default class Login extends React.Component {
 
   onClickSignup() {
@@ -100,7 +104,7 @@ export default class Login extends React.Component {
             <button
               type="button"
               style={styleBtnFacebook} className="waves-effect waves-light btn">
-              <i className="uk-icon-facebook left"></i>Facebook
+              <i style={spaceIcon} className="fa fa-facebook"></i>Facebook
             </button>
             </div>
           </div>
