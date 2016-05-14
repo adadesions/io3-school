@@ -30,6 +30,7 @@ const container = {
 }
 const styleHeader = {
   margin: '0px',
+  marginBottom: '0.25em',
 }
 export default class MainPage extends React.Component {
   componentDidMount(){
