@@ -72,7 +72,6 @@ const floatLeft = {
   display: 'flex',
   justifyContent: 'flex-start',
 }
-
 export default class SignUp extends React.Component {
 
   onClickBack() {

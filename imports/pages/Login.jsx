@@ -9,8 +9,11 @@ const center = {
   borderRadius: '2px',
   backgroundColor: 'rgba(250,250,250,0.8)',
 };
+const sizeFormLogin = {
+  width: '90%',
+};
 const sizeBoxBotton = {
-  width: '100%',
+  width: '90%',
 };
 const sizeBotton = {
   width: '100%',
@@ -22,7 +25,7 @@ const alignCenter = {
   height: '100vh',
   background: 'url("/images/login/background.jpg")',
   backgroundSize: 'cover',
-  marginBottom: 'none',
+  marginBottom: '0px',
 };
 const justifyCenter = {
   display: 'flex',
@@ -86,7 +89,7 @@ export default class Login extends React.Component {
               <img style={sizeImg} src="/images/login/logo.png"/>
             </div>
           </div>
-          <div className="row">
+          <div style={sizeFormLogin} className="row">
             <div className="input-field col l12">
               <input id="username" type="text" className="validate"/>
               <label htmlFor="username">Username</label>
