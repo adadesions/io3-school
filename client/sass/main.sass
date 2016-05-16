@@ -62,13 +62,14 @@ nav
 /////Responsive/////
 
 $breakpoint-tablet: 992px
-$breakpoint-mobile: 750px
+$breakpoint-mobile-mini: 350px
+$breakpoint-mobile-large: 1000px
 $breakpoint-labtop: 1366px
 $breakpoint-desktop: 1680px
 
 
 /////Labtop Display/////
-@media only screen and (min-width: $breakpoint-mobile) and (max-width: $breakpoint-labtop)
+@media only screen and (min-width: 1001px) and (max-width: $breakpoint-labtop)
   /////Login Page/////
   .style-form-login
     display: flex
@@ -128,3 +129,81 @@ $breakpoint-desktop: 1680px
   .list-img-slide
     width: 26.8em !important
     height: 42em !important
+
+/////mobile/////
+@media only screen and (min-width: $breakpoint-mobile-mini) and (max-width: $breakpoint-mobile-large)
+  /////Login Page/////
+  .style-form-login
+    display: flex
+    align-items: center
+    flex-flow: column
+    height: 80%
+    width: 100% !important
+    border-radius: 2px
+    background-color: rgba(250,250,250,0.8)
+  .style-form-signup
+    display: flex
+    align-items: center
+    flex-flow: column
+    height: 61% !important
+    width: 100% !important
+    border-radius: 2px
+    background-color: rgba(250,250,250,0.8)
+  .img-logo
+    margin-top: 6em !important
+    width: 12em !important
+  .col.s12.input-login
+    margin-top: 3em
+  .col.s12
+    #username
+      font-size: 40px
+      margin-top: 0.5em
+    #password
+      font-size: 40px
+      margin-top: 0.5em
+    #rePassword
+      font-size: 40px
+      margin-top: 0.5em
+    #btnLogin
+      height: 3em
+      font-size: 30px
+    #btnLoginFacebook
+      height: 3em
+      font-size: 30px
+      i
+        font-size: 2rem
+    #btnSignup
+      height: 3em
+      font-size: 30px
+    #btnBack
+      height: 3em
+      font-size: 30px
+    label
+      font-size: 30px
+  .forget-password
+    display: flex
+    align-items: flex-end
+    height: 30%
+    h6
+      font-size: 40px
+  .btn-floating.btn-large.style-signup-button
+    margin-right: -8.3em
+    margin-top: 35em
+    width: 13em
+    height: 13em
+    i
+      font-size: 6.2em !important
+  /////Main Page/////
+  .slider
+    height: 38.3em !important
+    margin-bottom: 1em
+  .radius-img
+    -webkit-border-bottom-right-radius: 100px
+    -webkit-border-bottom-left-radius: 100px
+    -moz-border-radius-bottomright: 100px
+    -moz-border-radius-bottomleft: 100px
+    border-bottom-right-radius: 100px
+    border-bottom-left-radius: 100px
+  .list-img-slide
+    width: 21.45em !important
+    height: 35em !important

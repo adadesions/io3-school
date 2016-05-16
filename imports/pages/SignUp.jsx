@@ -83,21 +83,21 @@ export default class SignUp extends React.Component {
   render() {
     return (
       <div style={alignCenter} className="row">
-        <div className="col l4">
+        <div className="col s2 l4">
           <br/>
         </div>
-        <form style={center} className="col l4 z-depth-1">
+        <form style={center} className="col s8 l4 style-form-signup z-depth-1">
           <div className="row">
             <div>
-              <img style={sizeImg} src="/images/login/logo.png"/>
+              <img className="img-logo" style={sizeImg} src="/images/login/logo.png"/>
             </div>
           </div>
           <div className="row">
-            <div className="input-field col l12">
+            <div className="input-field col s12 l12">
               <input id="username" type="text" className="validate"/>
               <label htmlFor="username">Username</label>
             </div>
-            <div className="input-field col l12">
+            <div className="input-field col s12 l12">
               <input
                 id="password"
                 type="password"
@@ -105,7 +105,7 @@ export default class SignUp extends React.Component {
               />
               <label htmlFor="password">Password</label>
             </div>
-            <div className="input-field col l12">
+            <div className="input-field col s12 l12">
               <input
                 id="rePassword"
                 type="password"
@@ -113,7 +113,7 @@ export default class SignUp extends React.Component {
               />
             <label htmlFor="rePassword">Re-Password</label>
             </div>
-            <div className="input-field col l12">
+            <div className="input-field col s12 l12">
               <p>
                 <input type="checkbox" id="term-condition"/>
                 <label htmlFor="term-condition">Accept Term And Condition</label>
@@ -121,14 +121,16 @@ export default class SignUp extends React.Component {
             </div>
           </div>
           <div style={sizeBoxBotton} className="row">
-            <div className="input-field col l12">
+            <div className="input-field col s12 l12">
               <button
+                id="btnSignup"
                 type="button"
                 style={sizeBotton}
                 className="waves-effect waves-light btn"
               >Let's Rock!
               </button>
             <button
+              id="btnBack"
               type="button"
               style={sizeBottonCancel}
               className="waves-effect waves-light btn"
@@ -138,7 +140,7 @@ export default class SignUp extends React.Component {
             </div>
           </div>
           </form>
-            <div className="col l4">
+            <div className="col s2 l4">
             <br/>
            </div>
         </div>

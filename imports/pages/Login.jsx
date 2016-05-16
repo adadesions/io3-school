@@ -70,21 +70,21 @@ export default class Login extends React.Component {
   render() {
     return (
       <div style={alignCenter} className="row">
-        <div className="col l4">
+        <div className="col s2 l4">
           <br/>
         </div>
-        <form className="col l4 style-form-login z-depth-1">
+        <form className="col s12 l4 style-form-login z-depth-1">
           <div className="row">
             <div>
-              <img style={sizeImg} src="/images/login/logo.png"/>
+              <img style={sizeImg} className="img-logo" src="/images/login/logo.png"/>
             </div>
           </div>
           <div style={sizeFormLogin} className="row">
-            <div className="input-field col l12">
+            <div className="input-field col s12 l12 input-login">
               <input id="username" type="text" className="validate"/>
               <label htmlFor="username">Username</label>
             </div>
-            <div className="input-field col l12">
+            <div className="input-field col s12 l12 input-login">
               <input
                 id="password"
                 type="password"
@@ -94,14 +94,16 @@ export default class Login extends React.Component {
             </div>
           </div>
           <div style={sizeBoxBotton} className="row">
-            <div className="input-field col l12">
+            <div className="input-field col s12 l12">
               <button
+                id="btnLogin"
                 type="button"
                 style={sizeBotton}
                 className="waves-effect waves-light btn"
               >Login
             </button>
             <button
+              id="btnLoginFacebook"
               type="button"
               style={styleBtnFacebook} className="waves-effect waves-light btn">
               <i style={spaceIcon} className="fa fa-facebook"></i>Facebook
@@ -109,10 +111,10 @@ export default class Login extends React.Component {
             </div>
           </div>
           <div style={justifyCenter} className="row">
-            <div style={floatLeft} className="input-field col l6">
+            <div style={floatLeft} className="input-field col s6 l6 forget-password">
               <a><h6>Forgot Password ?</h6></a>
             </div>
-            <div style={floatRight} className="input-field col l6">
+            <div style={floatRight} className="input-field col s6 l6">
               <a
                  className="btn-floating btn-large waves-effect waves-light blue style-signup-button"
                  onClick={this.onClickSignup}
@@ -122,7 +124,7 @@ export default class Login extends React.Component {
             </div>
           </div>
           </form>
-            <div className="col l4">
+            <div className="col s2 l4">
             <br/>
            </div>
         </div>
