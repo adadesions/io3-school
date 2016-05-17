@@ -98,6 +98,10 @@ export default class SignUp extends React.Component {
               <label htmlFor="usernameSignup">Username</label>
             </div>
             <div className="input-field col s12 l12">
+              <input id="email" type="email" className="validate"/>
+              <label htmlFor="email">Email</label>
+            </div>
+            <div className="input-field col s12 l12">
               <input
                 id="passwordSignup"
                 type="password"
