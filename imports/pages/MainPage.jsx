@@ -1,8 +1,12 @@
 import React from 'react';
+import { isUserlogIn } from '../adaCodeModules/adacode.js';
+import { createContainer } from 'meteor/react-meteor-data';
 
+// Components
 import Navigator from '../ui/components/navBar/Navigator.jsx';
 import Items from '../ui/components/mainPage/Items.jsx';
 import LeftContent from '../ui/components/mainPage/leftContent/LeftContent.jsx';
+
 const leftContent = {
   position: 'fixed',
   marginTop: '-0.2em',
@@ -32,7 +36,7 @@ const styleHeader = {
   margin: '0px',
   marginBottom: '0.25em',
 }
-export default class MainPage extends React.Component {
+class MainPage extends React.Component {
   componentDidMount(){
     $(document).ready(function(){
       $('.slider').slider({full_width: true});
@@ -64,3 +68,8 @@ export default class MainPage extends React.Component {
     )
   }
 }
+
+export default createContainer(() => {
+  isUserlogIn();
+  return {};
+}, MainPage);

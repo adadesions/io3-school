@@ -3,6 +3,7 @@ import { Meteor } from 'meteor/meteor';
 import { FlowRouter } from 'meteor/kadira:flow-router';
 import { Accounts } from 'meteor/accounts-base';
 import { createContainer } from 'meteor/react-meteor-data';
+import { isUserlogIn } from '../adaCodeModules/adacode.js';
 
 const center = {
   display: 'flex',
@@ -224,9 +225,6 @@ class SignUp extends React.Component {
 }
 
 export default createContainer(() => {
-  const isLoggedIn = Meteor.userId();
-  if( isLoggedIn ) {
-    FlowRouter.go('mainpage');
-  }
+  isUserlogIn();
   return {};
 }, SignUp);

@@ -1,6 +1,9 @@
-import {  Meteor } from 'meteor/meteor';
 import React from 'react';
+import { Meteor } from 'meteor/meteor';
 import { FlowRouter } from 'meteor/kadira:flow-router';
+import { createContainer } from 'meteor/react-meteor-data';
+import { isUserlogIn } from '../adaCodeModules/adacode.js';
+import { Session } from 'meteor/session';
 
 const sizeFormLogin = {
   width: '90%',
@@ -62,9 +65,12 @@ const floatLeft = {
 const spaceIcon = {
   marginRight: '0.5em',
 }
-export default class Login extends React.Component {
+class Login extends React.Component {
   constructor() {
     super();
+    this.state = {
+      loginError: '',
+    };
     this.onClickLogin = this.onClickLogin.bind(this);
   }
 
@@ -75,9 +81,19 @@ export default class Login extends React.Component {
   onClickLogin() {
     const username = this.refs.username.value;
     const password = this.refs.password.value;
+    const isSuccessLogin = Meteor.userId();
+    Session.setDefault('loginError', '');
     Meteor.loginWithPassword({
       email: username
-    }, password);
+    }, password, function (err) {
+      if( err ) {
+        Session.set('loginError', err.reason);
+      }
+    });
+
+    this.setState({
+      loginError: Session.get('loginError'),
+    });
   }
 
   render() {
@@ -90,6 +106,7 @@ export default class Login extends React.Component {
           <div className="row">
             <div>
               <img style={sizeImg} className="img-logo" src="/images/login/logo.png"/>
+              <p> { this.state.loginError } </p>
             </div>
           </div>
           <div style={sizeFormLogin} className="row">
@@ -151,3 +168,8 @@ export default class Login extends React.Component {
     )
   }
 }
+
+export default createContainer(() => {
+  isUserlogIn();
+  return {};
+}, Login);
