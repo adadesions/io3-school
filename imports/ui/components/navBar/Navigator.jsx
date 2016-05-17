@@ -1,6 +1,11 @@
 import React from 'react';
+import { Meteor } from 'meteor/meteor';
+import { createContainer } from 'meteor/react-meteor-data';
+
+// Components
 import Menu from './Menu.jsx';
 import Avatar from './Avatar.jsx';
+
 const colorNav = {
   backgroundColor: '#43609C',
   display: 'flex',
@@ -20,16 +25,29 @@ const styleNav = {
   position: 'fixed',
   zIndex: '999',
 }
-export default class Navigator extends React.Component {
+
+class Navigator extends React.Component {
   render() {
     return (
       <nav style={styleNav} id="navigator">
         <div style={colorNav} className="nav-wrapper">
           <a href="#" className="brand-logo brand-ada"><img style={sizeImg} src="/images/navigator/logo2.png"/></a>
           <Menu />
-          <Avatar/>
+          <Avatar username={this.props.username} />
         </div>
       </nav>
     )
   }
 }
+
+
+
+export default createContainer(() => {
+  let username = "No name";
+  if ( Meteor.user() ) {
+    username = Meteor.user().username;
+  }
+  return {
+    username,
+  }
+}, Navigator);
