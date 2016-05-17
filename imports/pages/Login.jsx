@@ -1,3 +1,4 @@
+import {  Meteor } from 'meteor/meteor';
 import React from 'react';
 import { FlowRouter } from 'meteor/kadira:flow-router';
 
@@ -62,9 +63,21 @@ const spaceIcon = {
   marginRight: '0.5em',
 }
 export default class Login extends React.Component {
+  constructor() {
+    super();
+    this.onClickLogin = this.onClickLogin.bind(this);
+  }
 
   onClickSignup() {
     FlowRouter.go('signup');
+  }
+
+  onClickLogin() {
+    const username = this.refs.username.value;
+    const password = this.refs.password.value;
+    Meteor.loginWithPassword({
+      email: username
+    }, password);
   }
 
   render() {
@@ -81,12 +94,18 @@ export default class Login extends React.Component {
           </div>
           <div style={sizeFormLogin} className="row">
             <div className="input-field col s12 l12 input-login">
-              <input id="username" type="text" className="validate"/>
+              <input
+                id="username"
+                ref="username"
+                type="text"
+                className="validate"
+              />
               <label htmlFor="username">Username</label>
             </div>
             <div className="input-field col s12 l12 input-login">
               <input
                 id="password"
+                ref="password"
                 type="password"
                 className="validate"
               />
@@ -100,6 +119,7 @@ export default class Login extends React.Component {
                 type="button"
                 style={sizeBotton}
                 className="waves-effect waves-light btn"
+                onClick={ this.onClickLogin }
               >Login
             </button>
             <button
@@ -117,7 +137,7 @@ export default class Login extends React.Component {
             <div style={floatRight} className="input-field col s6 l6">
               <a
                  className="btn-floating btn-large waves-effect waves-light blue style-signup-button"
-                 onClick={this.onClickSignup}
+                 onClick={ this.onClickSignup }
               >
                 <i style={sizeIcon} className="material-icons">add</i>
               </a>

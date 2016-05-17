@@ -11,7 +11,19 @@ import Player from '../../imports/pages/Player.jsx';
 
 import AdminContainer from '../../imports/layouts/AdminContainer.jsx';
 import AdminSite from '../../imports/pages/admin/AdminSite.jsx';
-FlowRouter.route('/', {
+
+// School Router Section
+
+const schoolRouter = FlowRouter.group({
+  name: 'school',
+});
+
+const adminRouter = FlowRouter.group({
+  prefix: '/admin',
+  name: 'admin',
+});
+
+schoolRouter.route('/', {
   name: 'root',
   action() {
     mount(LoginContainer, {
@@ -20,7 +32,7 @@ FlowRouter.route('/', {
   },
 });
 
-FlowRouter.route('/SignUp', {
+schoolRouter.route('/signup', {
   name: 'signup',
   action() {
     mount(LoginContainer, {
@@ -29,7 +41,7 @@ FlowRouter.route('/SignUp', {
   },
 });
 
-FlowRouter.route('/school', {
+schoolRouter.route('/school', {
   name: 'mainpage',
   action() {
     mount(Container, {
@@ -38,7 +50,7 @@ FlowRouter.route('/school', {
   },
 });
 
-FlowRouter.route('/Player', {
+schoolRouter.route('/player', {
   name: 'player',
   action() {
     mount(Container, {
@@ -47,7 +59,8 @@ FlowRouter.route('/Player', {
   },
 });
 
-FlowRouter.route('/adminsite', {
+// Admin Router Section
+adminRouter.route('/adminsite', {
   name: 'adminSite',
   action() {
     mount(AdminContainer, {

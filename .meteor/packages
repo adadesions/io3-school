@@ -21,3 +21,5 @@ react-meteor-data
 fourseven:scss
 poetic:materialize-scss
 fortawesome:fontawesome
+accounts-base
+accounts-password

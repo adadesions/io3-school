@@ -80,6 +80,10 @@ export default class SignUp extends React.Component {
     FlowRouter.go('root');
   }
 
+  onClickLetsRock() {
+
+  }
+
   render() {
     return (
       <div style={alignCenter} className="row">
@@ -94,12 +98,18 @@ export default class SignUp extends React.Component {
           </div>
           <div className="row">
             <div className="input-field col s12 l12">
-              <input id="usernameSignup" type="text" className="validate"/>
+              <input
+                id="usernameSignup"
+                ref="username"
+                type="text"
+                className="validate"
+              />
               <label htmlFor="usernameSignup">Username</label>
             </div>
             <div className="input-field col s12 l12">
               <input
                 id="passwordSignup"
+                ref="password"
                 type="password"
                 className="validate"
               />
@@ -108,6 +118,7 @@ export default class SignUp extends React.Component {
             <div className="input-field col s12 l12">
               <input
                 id="rePassword"
+                ref="rePassword"
                 type="password"
                 className="validate"
               />
@@ -115,7 +126,11 @@ export default class SignUp extends React.Component {
             </div>
             <div className="input-field col s12 l12">
               <p>
-                <input type="checkbox" id="term-condition"/>
+                <input
+                  type="checkbox"
+                  id="term-condition"
+                  ref="acceptBox"
+                />
                 <label className="term-condition" htmlFor="term-condition">Accept Term And Condition</label>
               </p>
             </div>
@@ -127,6 +142,7 @@ export default class SignUp extends React.Component {
                 type="button"
                 style={sizeBotton}
                 className="waves-effect waves-light btn"
+                onClick={ this.onClickLetsRock }
               >Let's Rock!
               </button>
             <button
