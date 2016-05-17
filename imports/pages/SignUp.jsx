@@ -1,11 +1,14 @@
 import React from 'react';
+import { Meteor } from 'meteor/meteor';
 import { FlowRouter } from 'meteor/kadira:flow-router';
+import { Accounts } from 'meteor/accounts-base';
+import { createContainer } from 'meteor/react-meteor-data';
 
 const center = {
   display: 'flex',
   alignItems: 'center',
   flexFlow: 'column',
-  height: '85%',
+  height: '95%',
   borderRadius: '2px',
   backgroundColor: 'rgba(250,250,250,0.8)',
 };
@@ -74,14 +77,61 @@ const floatLeft = {
   display: 'flex',
   justifyContent: 'flex-start',
 }
-export default class SignUp extends React.Component {
+class SignUp extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      username: '',
+      email: '',
+      password: '',
+      rePassword: '',
+    };
+    this.onClickLetsRock = this.onClickLetsRock.bind(this);
+  }
 
   onClickBack() {
     FlowRouter.go('root');
   }
 
   onClickLetsRock() {
+    const username = this.refs.username.value;
+    const password = this.refs.password.value;
+    const rePassword = this.refs.rePassword.value;
+    const email = this.refs.email.value;
+    const acceptBox = this.refs.acceptBox.checked;
+    const passwordMatch = ( password === rePassword );
+    const isUsernameNull = !username;
+    const isEmailNull = !email;
+    const newUser = {
+      username,
+      password,
+      email,
+    }
+    if( passwordMatch && acceptBox ) {
+      Accounts.createUser(newUser, function () {
+        FlowRouter.go('mainpage')
+      })
+    }
+    else {
+      if( !passwordMatch ) {
+        this.setState({
+          password: 'invalid',
+          rePassword: 'invalid',
+        });
+      }
 
+      if( isUsernameNull ) {
+        this.setState({
+          username: 'invalid',
+        });
+      }
+
+      if( isEmailNull ) {
+        this.setState({
+          email: 'invalid',
+        });
+      }
+    }
   }
 
   render() {
@@ -102,12 +152,17 @@ export default class SignUp extends React.Component {
                 id="usernameSignup"
                 ref="username"
                 type="text"
-                className="validate"
+                className={ `validate ${this.state.username}` }
               />
               <label htmlFor="usernameSignup">Username</label>
             </div>
             <div className="input-field col s12 l12">
-              <input id="email" type="email" className="validate"/>
+              <input
+                id="email"
+                ref="email"
+                type="email"
+                className="validate"
+                />
               <label htmlFor="email">Email</label>
             </div>
             <div className="input-field col s12 l12">
@@ -167,3 +222,11 @@ export default class SignUp extends React.Component {
     )
   }
 }
+
+export default createContainer(() => {
+  const isLoggedIn = Meteor.userId();
+  if( isLoggedIn ) {
+    FlowRouter.go('mainpage');
+  }
+  return {};
+}, SignUp);
