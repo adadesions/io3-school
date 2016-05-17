@@ -94,16 +94,16 @@ export default class SignUp extends React.Component {
           </div>
           <div className="row">
             <div className="input-field col s12 l12">
-              <input id="username" type="text" className="validate"/>
-              <label htmlFor="username">Username</label>
+              <input id="usernameSignup" type="text" className="validate"/>
+              <label htmlFor="usernameSignup">Username</label>
             </div>
             <div className="input-field col s12 l12">
               <input
-                id="password"
+                id="passwordSignup"
                 type="password"
                 className="validate"
               />
-              <label htmlFor="password">Password</label>
+              <label htmlFor="passwordSignup">Password</label>
             </div>
             <div className="input-field col s12 l12">
               <input
@@ -116,7 +116,7 @@ export default class SignUp extends React.Component {
             <div className="input-field col s12 l12">
               <p>
                 <input type="checkbox" id="term-condition"/>
-                <label htmlFor="term-condition">Accept Term And Condition</label>
+                <label className="term-condition" htmlFor="term-condition">Accept Term And Condition</label>
               </p>
             </div>
           </div>

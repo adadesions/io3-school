@@ -19,15 +19,15 @@ export default class Items extends React.Component {
 
   render() {
     return (
-          <div className="col m3 tumbnail-items">
-            <div style={styleCard} className="card small">
+          <div className="col s6 l3 tumbnail-items">
+            <div style={styleCard} className="card small card-mobile">
               <div className="card-image waves-effect waves-block waves-light radius-img">
-                <img style={styleTumbnail} className="activator" src="images/mainPage/tumbnail2.png"/>
+                <img className="activator tumbnail-img" src="images/mainPage/tumbnail2.png"/>
               </div>
               <div className="card-content detail-tumbnail">
                 <span className="card-title activator grey-text text-darken-4">Card Title<i className="material-icons right">more_vert</i></span>
                 <p style={styleButton}>
-                  <a onClick={this.onClickPlay} className="btn-floating btn-small waves-effect waves-light red"><i className="material-icons">play_arrow</i></a>
+                  <a onClick={this.onClickPlay} className="btn-floating btn-small waves-effect waves-light red"><i className="material-icons icon-play">play_arrow</i></a>
                 </p>
               </div>
               <div id="style-1" className="card-reveal">

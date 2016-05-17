@@ -1,6 +1,5 @@
 import React from 'react';
-import Menu from './Menu.jsx';
-import Avatar from './Avatar.jsx';
+import AdminAvatar from './AdminAvatar.jsx';
 const colorNav = {
   backgroundColor: '#43609C',
   display: 'flex',
@@ -20,14 +19,13 @@ const styleNav = {
   position: 'fixed',
   zIndex: '999',
 }
-export default class Navigator extends React.Component {
+export default class AdminNavigator extends React.Component {
   render() {
     return (
       <nav style={styleNav} id="navigator">
         <div style={colorNav} className="nav-wrapper">
-          <a href="#" className="brand-logo brand-ada"><img style={sizeImg} src="/images/navigator/logo2.png"/></a>
-          <Menu />
-          <Avatar/>
+          <a href="#" className="brand-logo brand-admin"><img style={sizeImg} src="/images/navigator/logo2.png"/></a>
+          <AdminAvatar/>
         </div>
       </nav>
     )

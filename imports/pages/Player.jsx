@@ -46,7 +46,7 @@ const styleFontRelates = {
 export default class Player extends React.Component {
   render() {
     return (
-      <div style={playerPage}>
+      <div className="player-page" style={playerPage}>
         <div style={styleContainerPlayer}>
           {/*<VideoItem />*/}
           <VideoItemEmbed />

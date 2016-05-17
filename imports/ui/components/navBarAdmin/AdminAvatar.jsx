@@ -9,7 +9,7 @@ const styleAvatar = {
   fontSize: '16px',
   fontWeight: 'bold',
 }
-export default class Avatar extends React.Component {
+export default class AdminAvatar extends React.Component {
 
   componentDidMount(){
     $(".dropdown-button").dropdown();

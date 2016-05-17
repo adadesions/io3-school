@@ -8,9 +8,14 @@ div
 nav
   .brand-logo.brand-ada
     position: static !important
+nav
+  .brand-logo.brand-admin
+    position: static !important
 .row.main-page
   .col
     padding: 0
+.tumbnail-img
+  height: 7.6em important
 .row.main-page
   .col.tumbnail-items
     padding-left: 1em
@@ -42,6 +47,14 @@ nav
       box-shadow: 0px 0px 2px 0px rgba(189,187,189,1)
 .divider
   margin-bottom: 0.4em
+
+/////Navigator/////
+
+.menu-nav
+  a
+    font-size: 20px
+    font-weight: bold
+
 
 /////Scroll Bar/////
 #style-1::-webkit-scrollbar-track
@@ -137,73 +150,161 @@ $breakpoint-desktop: 1680px
     display: flex
     align-items: center
     flex-flow: column
-    height: 80%
     width: 100% !important
+    height: 80em !important
     border-radius: 2px
     background-color: rgba(250,250,250,0.8)
   .style-form-signup
     display: flex
     align-items: center
     flex-flow: column
-    height: 61% !important
+    height: 82em !important
     width: 100% !important
     border-radius: 2px
     background-color: rgba(250,250,250,0.8)
   .img-logo
     margin-top: 6em !important
+    margin-bottom: 2em
     width: 12em !important
   .col.s12.input-login
     margin-top: 3em
   .col.s12
     #username
       font-size: 40px
-      margin-top: 0.5em
+      margin-top: 1.5em
     #password
       font-size: 40px
-      margin-top: 0.5em
+      margin-top: 1.5em
+    #usernameSignup
+      font-size: 40px
+      line-height: 0px
+      margin-top: 1.5em
+    #passwordSignup
+      font-size: 40px
+      margin-top: 1.5em
     #rePassword
       font-size: 40px
-      margin-top: 0.5em
+      margin-top: 1.5em
     #btnLogin
-      height: 3em
-      font-size: 30px
+      height: 2.5em
+      font-size: 35px
+      margin-top: 1em
     #btnLoginFacebook
-      height: 3em
-      font-size: 30px
+      height: 2.5em
+      font-size: 35px
+      margin-top: 1em
       i
-        font-size: 2rem
+        font-size: 2.5rem
     #btnSignup
-      height: 3em
-      font-size: 30px
+      height: 2.5em
+      font-size: 35px
     #btnBack
-      height: 3em
-      font-size: 30px
+      height: 2.5em
+      font-size: 35px
+    label.term-condition
+      font-size: 40px
+      margin-top: 1em
+      margin-bottom: 1em
     label
-      font-size: 30px
+      font-size: 50px
+    label.active
+      transform: translateY(-60%)
+      font-size: 40px
   .forget-password
     display: flex
     align-items: flex-end
-    height: 30%
+    height: 10%
     h6
       font-size: 40px
   .btn-floating.btn-large.style-signup-button
     margin-right: -8.3em
-    margin-top: 35em
+    margin-top: 13em
     width: 13em
     height: 13em
     i
       font-size: 6.2em !important
+
+
+  /////Navigator/////
+  nav
+    .brand-logo.brand-ada
+      position: fixed !important
+  #navigator
+    height: 15em
+    width: 100%
+  .nav-wrapper
+    display: flex
+    flex-flow: column
+  .menu-nav
+    display: flex
+    justify-content: space-around
+    margin-bottom: 1em
+    order: 3
+    a
+      font-size: 40px
+  .avatar-nav
+    display: flex
+    justify-content: flex-end
+    order: 2
+  .brand-logo
+    margin-left: 11.2em
+    width: 100%
+    display: flex
+    justify-content: center
+    order: 1
+    img
+      width: 12em !important
+      height: 5em
+
   /////Main Page/////
+  .slides
+    height: 70em !important
   .slider
-    height: 38.3em !important
+    height: 74.3em !important
     margin-bottom: 1em
   .radius-img
-    -webkit-border-bottom-right-radius: 100px
-    -webkit-border-bottom-left-radius: 100px
-    -moz-border-radius-bottomright: 100px
-    -moz-border-radius-bottomleft: 100px
-    border-bottom-right-radius: 100px
-    border-bottom-left-radius: 100px
+    -webkit-border-bottom-right-radius: 200px
+    -webkit-border-bottom-left-radius: 200px
+    -moz-border-radius-bottomright: 200px
+    -moz-border-radius-bottomleft: 200px
+    border-bottom-right-radius: 200px
+    border-bottom-left-radius: 200px
   .list-img-slide
-    width: 21.45em !important
-    height: 35em !important
+    width: 100% !important
+    height: auto !important
+    h5
+      font-size: 60px
+  .column-news
+    position: relative !important
+    margin-top: 10em !important
+  .column-course
+    margin-left: 0em !important
+  .course-container
+    width: 100% !important
+    h4.course-header
+      font-size: 60px
+    .divider
+      margin-bottom: 1.5em
+  .card-mobile
+    height: 430px !important
+    margin: 1em
+    margin-bottom: 1em
+  .tumbnail-img
+    height: 17em important
+  .detail-tumbnail
+    padding-top: 1em !important
+    .card-title
+      font-size: 50px
+    i
+      font-size: 45px
+      padding-top: 0 !important
+    i.icon-play
+      line-height: 1.2em
+      font-size: 5em
+    .btn-floating
+      width: 6em
+      height: 6em
+      margin-top: 0.5em
+  /////Player Page/////
+  .player-page
+    margin-top: 10.5em !important

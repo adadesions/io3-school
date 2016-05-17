@@ -41,20 +41,20 @@ export default class MainPage extends React.Component {
   render() {
     return (
       <div className="row main-page">
-        <div style={leftContent} className="col m3 z-depth-1">
+        <div style={leftContent} className="col s12 l3 z-depth-1 column-news">
           <div className="row">
             <LeftContent />
           </div>
         </div>
-        <div style={rightContent} className="col m9">
-          <div style={container} className="z-depth-1">
+        <div style={rightContent} className="col s12 l9 column-course">
+          <div style={container} className="z-depth-1 course-container">
             <div style={styleRow} className="row">
-              <h4 style={styleHeader}>Free</h4>
+              <h4 className="course-header" style={styleHeader}>Free</h4>
               <div className="divider"></div>
               <Items />
             </div>
             <div style={styleRow} className="row">
-              <h4 style={styleHeader}>Advance</h4>
+              <h4 className="course-header" style={styleHeader}>Advance</h4>
               <div className="divider"></div>
               <Items />
             </div>

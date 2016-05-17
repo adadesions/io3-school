@@ -9,6 +9,8 @@ import SignUp from '../../imports/pages/SignUp.jsx';
 import MainPage from '../../imports/pages/MainPage.jsx';
 import Player from '../../imports/pages/Player.jsx';
 
+import AdminContainer from '../../imports/layouts/AdminContainer.jsx';
+import AdminSite from '../../imports/pages/admin/AdminSite.jsx';
 FlowRouter.route('/', {
   name: 'root',
   action() {
@@ -41,6 +43,15 @@ FlowRouter.route('/Player', {
   action() {
     mount(Container, {
       content: <Player />,
+    });
+  },
+});
+
+FlowRouter.route('/adminsite', {
+  name: 'adminSite',
+  action() {
+    mount(AdminContainer, {
+      content: <AdminSite />,
     });
   },
 });
