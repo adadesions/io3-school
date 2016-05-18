@@ -31,7 +31,7 @@ class Navigator extends React.Component {
     return (
       <nav style={styleNav} id="navigator">
         <div style={colorNav} className="nav-wrapper">
-          <a href="#" className="brand-logo brand-ada"><img style={sizeImg} src="/images/navigator/logo2.png"/></a>
+          <a href="/school" className="brand-logo brand-ada"><img style={sizeImg} src="/images/navigator/logo2.png"/></a>
           <Menu />
           <Avatar username={this.props.username} />
         </div>
