@@ -74,6 +74,18 @@ class Login extends React.Component {
     this.onClickLogin = this.onClickLogin.bind(this);
   }
 
+  componentDidMount(){
+    $(document.body).on('keydown', this.onKeyDownLogin);
+  }
+
+  onKeyDownLogin(e) {
+    var ENTER = 13;
+    if( e.keyCode == ENTER ) {
+        $('#btnLogin').trigger('click');
+    }
+
+  }
+
   onClickSignup() {
     FlowRouter.go('signup');
   }

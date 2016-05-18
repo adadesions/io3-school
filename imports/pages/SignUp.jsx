@@ -90,6 +90,18 @@ class SignUp extends React.Component {
     this.onClickLetsRock = this.onClickLetsRock.bind(this);
   }
 
+  componentDidMount(){
+    $(document.body).on('keydown', this.onKeyDownSignup);
+  }
+
+  onKeyDownSignup(e) {
+    var ENTER = 13;
+    if( e.keyCode == ENTER ) {
+        $('#btnSignup').trigger('click');
+    }
+
+  }
+
   onClickBack() {
     FlowRouter.go('root');
   }
