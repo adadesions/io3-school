@@ -47,14 +47,14 @@ export default class AdminSite extends React.Component {
   render() {
     return (
       <div className="row admin-site">
-        <div style={leftContent} className="col s12 l2 z-depth-1">
+        <div style={leftContent} className="col l2 z-depth-1">
           <div className="row">
             <ul className="menu-admin">
               <MenuItemAdmin />
             </ul>
           </div>
         </div>
-        <div style={rightContent} className="col s12 l10">
+        <div style={rightContent} className="col l10">
           <div style={container} className="z-depth-1">
             <div style={styleRow} className="row">
               <ul className="tabs tab-menu-admin">

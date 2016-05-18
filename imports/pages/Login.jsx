@@ -22,7 +22,7 @@ const alignCenter = {
   height: '100vh',
   background: 'url("/images/login/background.jpg")',
   backgroundSize: 'cover',
-  marginBottom: '0px',
+  marginBottom: '0px !important',
 };
 const justifyCenter = {
   display: 'flex',
@@ -98,7 +98,7 @@ class Login extends React.Component {
 
   render() {
     return (
-      <div style={alignCenter} className="row">
+      <div style={alignCenter} className="row login-page">
         <div className="col s2 l4">
           <br/>
         </div>

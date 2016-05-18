@@ -20,12 +20,12 @@ export default class AdminAvatar extends React.Component {
       <ul id="nav-mobile" className="avatar-nav">
         <li><a className="dropdown-button" href="#!" data-activates="dropdown1">
           <div style={styleAvatar} className="large chip">
-            <img src="images/navigator/avatar.png"/>
+            <img src="/images/navigator/avatar.jpg"/>
             Ada Kaminkure
           </div>
           <i className="material-icons right">arrow_drop_down</i>
         </a></li>
-        <ul style={styleDropdown} id="dropdown1" className="dropdown-content">
+      <ul style={styleDropdown} id="dropdown1" className="dropdown-content avatar-admin">
           <li><a href="#!">one</a></li>
           <li><a href="#!">two</a></li>
           <li className="divider"></li>

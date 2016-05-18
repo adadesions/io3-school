@@ -24,7 +24,7 @@ export default class AdminNavigator extends React.Component {
     return (
       <nav style={styleNav} id="navigator">
         <div style={colorNav} className="nav-wrapper">
-          <a href="#" className="brand-logo brand-admin"><img style={sizeImg} src="/images/navigator/logo2.png"/></a>
+          <a href="/" className="brand-logo brand-admin"><img style={sizeImg} src="/images/navigator/logo2.png"/></a>
           <AdminAvatar/>
         </div>
       </nav>

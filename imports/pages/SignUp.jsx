@@ -137,7 +137,7 @@ class SignUp extends React.Component {
 
   render() {
     return (
-      <div style={alignCenter} className="row">
+      <div style={alignCenter} className="row signup-page">
         <div className="col s2 l4">
           <br/>
         </div>
