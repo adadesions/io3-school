@@ -39,7 +39,11 @@ const styleHeader = {
 class MainPage extends React.Component {
   componentDidMount(){
     $(document).ready(function(){
-      $('.slider').slider({full_width: true});
+      $('.slider').slider({
+                            full_width: true,
+                            Transition: 1,
+                            Interval: 0.1
+                          });
     });
   }
   render() {
