@@ -33,7 +33,7 @@ export default class Avatar extends React.Component {
           <li><a href="#!">one</a></li>
           <li><a href="#!">two</a></li>
           <li className="divider"></li>
-          <li><a href="#!">three</a></li>
+          <li><a href="#!">Logout</a></li>
         </ul>
       </ul>
     )
