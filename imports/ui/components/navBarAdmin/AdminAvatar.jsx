@@ -1,4 +1,5 @@
 import React from 'react';
+import { Meteor } from 'meteor/meteor';
 
 const styleDropdown = {
   top: '2em !important',
@@ -26,10 +27,7 @@ export default class AdminAvatar extends React.Component {
           <i className="material-icons right">arrow_drop_down</i>
         </a></li>
       <ul style={styleDropdown} id="dropdown1" className="dropdown-content avatar-admin">
-          <li><a href="#!">one</a></li>
-          <li><a href="#!">two</a></li>
-          <li className="divider"></li>
-          <li><a href="#!">Logout</a></li>
+          <li><a href="">Logout</a></li>
         </ul>
       </ul>
     )

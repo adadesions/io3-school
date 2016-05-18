@@ -35,8 +35,7 @@ export default class Avatar extends React.Component {
           <i className="material-icons right">arrow_drop_down</i>
         </a></li>
       <ul id="dropdown1" className="dropdown-content avatar">
-          <li><a href="#!">one</a></li>
-          <li><a href="#!">two</a></li>
+          <li><a href="#!">Profile (Comming Soon)</a></li>
           <hr/>
           <li><a href="" onClick={this.onClickAdminSite}>Admin Site</a></li>
           <hr/>
