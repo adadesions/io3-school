@@ -1,11 +1,15 @@
 import React from 'react';
+import { Meteor } from 'meteor/meteor';
 import { FlowRouter } from 'meteor/kadira:flow-router';
+import { Accounts } from 'meteor/accounts-base';
+import { createContainer } from 'meteor/react-meteor-data';
+import { isUserlogIn } from '../adaCodeModules/adacode.js';
 
 const center = {
   display: 'flex',
   alignItems: 'center',
   flexFlow: 'column',
-  height: '85%',
+  height: '95%',
   borderRadius: '2px',
   backgroundColor: 'rgba(250,250,250,0.8)',
 };
@@ -74,10 +78,61 @@ const floatLeft = {
   display: 'flex',
   justifyContent: 'flex-start',
 }
-export default class SignUp extends React.Component {
+class SignUp extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      username: '',
+      email: '',
+      password: '',
+      rePassword: '',
+    };
+    this.onClickLetsRock = this.onClickLetsRock.bind(this);
+  }
 
   onClickBack() {
     FlowRouter.go('root');
+  }
+
+  onClickLetsRock() {
+    const username = this.refs.username.value;
+    const password = this.refs.password.value;
+    const rePassword = this.refs.rePassword.value;
+    const email = this.refs.email.value;
+    const acceptBox = this.refs.acceptBox.checked;
+    const passwordMatch = ( password === rePassword );
+    const isUsernameNull = !username;
+    const isEmailNull = !email;
+    const newUser = {
+      username,
+      password,
+      email,
+    }
+    if( passwordMatch && acceptBox ) {
+      Accounts.createUser(newUser, function () {
+        FlowRouter.go('mainpage')
+      })
+    }
+    else {
+      if( !passwordMatch ) {
+        this.setState({
+          password: 'invalid',
+          rePassword: 'invalid',
+        });
+      }
+
+      if( isUsernameNull ) {
+        this.setState({
+          username: 'invalid',
+        });
+      }
+
+      if( isEmailNull ) {
+        this.setState({
+          email: 'invalid',
+        });
+      }
+    }
   }
 
   render() {
@@ -94,16 +149,27 @@ export default class SignUp extends React.Component {
           </div>
           <div className="row">
             <div className="input-field col s12 l12">
-              <input id="usernameSignup" type="text" className="validate"/>
+              <input
+                id="usernameSignup"
+                ref="username"
+                type="text"
+                className={ `validate ${this.state.username}` }
+              />
               <label htmlFor="usernameSignup">Username</label>
             </div>
             <div className="input-field col s12 l12">
-              <input id="email" type="email" className="validate"/>
+              <input
+                id="email"
+                ref="email"
+                type="email"
+                className="validate"
+                />
               <label htmlFor="email">Email</label>
             </div>
             <div className="input-field col s12 l12">
               <input
                 id="passwordSignup"
+                ref="password"
                 type="password"
                 className="validate"
               />
@@ -112,6 +178,7 @@ export default class SignUp extends React.Component {
             <div className="input-field col s12 l12">
               <input
                 id="rePassword"
+                ref="rePassword"
                 type="password"
                 className="validate"
               />
@@ -119,7 +186,11 @@ export default class SignUp extends React.Component {
             </div>
             <div className="input-field col s12 l12">
               <p>
-                <input type="checkbox" id="term-condition"/>
+                <input
+                  type="checkbox"
+                  id="term-condition"
+                  ref="acceptBox"
+                />
                 <label className="term-condition" htmlFor="term-condition">Accept Term And Condition</label>
               </p>
             </div>
@@ -131,6 +202,7 @@ export default class SignUp extends React.Component {
                 type="button"
                 style={sizeBotton}
                 className="waves-effect waves-light btn"
+                onClick={ this.onClickLetsRock }
               >Let's Rock!
               </button>
             <button
@@ -151,3 +223,8 @@ export default class SignUp extends React.Component {
     )
   }
 }
+
+export default createContainer(() => {
+  isUserlogIn();
+  return {};
+}, SignUp);

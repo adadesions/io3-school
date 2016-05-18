@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
+
 
 const styleDropdown = {
   top: '2em !important',
@@ -10,6 +11,9 @@ const styleAvatar = {
   fontWeight: 'bold',
 }
 export default class Avatar extends React.Component {
+  constructor(props) {
+    super(props);
+  }
 
   componentDidMount(){
     $(".dropdown-button").dropdown();
@@ -21,7 +25,7 @@ export default class Avatar extends React.Component {
         <li><a className="dropdown-button" href="#!" data-activates="dropdown1">
           <div style={styleAvatar} className="large chip">
             <img src="images/navigator/avatar.png"/>
-            Ada Kaminkure
+            { this.props.username }
           </div>
           <i className="material-icons right">arrow_drop_down</i>
         </a></li>
@@ -34,4 +38,8 @@ export default class Avatar extends React.Component {
       </ul>
     )
   }
+}
+
+Avatar.props = {
+  username: PropTypes.string.isRequired,
 }
