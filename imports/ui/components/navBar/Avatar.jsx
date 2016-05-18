@@ -1,4 +1,5 @@
 import React, { PropTypes } from 'react';
+import { Meteor } from 'meteor/meteor';
 
 
 const styleDropdown = {
@@ -19,6 +20,10 @@ export default class Avatar extends React.Component {
     $(".dropdown-button").dropdown();
   }
 
+  onClickLogOut() {
+    Meteor.logout();
+  }
+
   render() {
     return(
       <ul id="nav-mobile" className="avatar-nav">
@@ -33,7 +38,14 @@ export default class Avatar extends React.Component {
           <li><a href="#!">one</a></li>
           <li><a href="#!">two</a></li>
           <li className="divider"></li>
-          <li><a href="#!">Logout</a></li>
+          <li>
+            <a
+              href="#!"
+              onClick={ this.onClickLogOut }
+            >
+              Logout
+            </a>
+          </li>
         </ul>
       </ul>
     )
