@@ -8,6 +8,12 @@ export const isUserlogIn = function () {
     FlowRouter.go('mainpage');
   }
   else {
-    FlowRouter.go('root');
+    const isSignUp = ( path === '/signup' );
+    if ( isSignUp ) {
+      FlowRouter.go('signup');
+    }
+    else {
+      FlowRouter.go('root');  
+    }
   }
 }
