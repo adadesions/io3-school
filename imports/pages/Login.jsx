@@ -117,7 +117,7 @@ class Login extends React.Component {
                 type="text"
                 className="validate"
               />
-              <label htmlFor="username">Username</label>
+            <label htmlFor="username">Email</label>
             </div>
             <div className="input-field col s12 l12 input-login">
               <input

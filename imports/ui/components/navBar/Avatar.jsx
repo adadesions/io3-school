@@ -1,4 +1,5 @@
 import React, { PropTypes } from 'react';
+import { Meteor } from 'meteor/meteor';
 
 const styleAvatar = {
   backgroundColor: '#f44336',
@@ -19,6 +20,10 @@ export default class Avatar extends React.Component {
     FlowRouter.go('adminSite')
   }
 
+  onClickLogOut() {
+    Meteor.logout();
+  }
+
   render() {
     return(
       <ul id="nav-mobile" className="avatar-nav">
@@ -35,7 +40,14 @@ export default class Avatar extends React.Component {
           <hr/>
           <li><a href="" onClick={this.onClickAdminSite}>Admin Site</a></li>
           <hr/>
-          <li><a href="#!">Logout</a></li>
+          <li>
+            <a
+              href="#!"
+              onClick={ this.onClickLogOut }
+            >
+              Logout
+            </a>
+          </li>
         </ul>
       </ul>
     )
