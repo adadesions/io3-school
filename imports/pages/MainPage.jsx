@@ -13,7 +13,6 @@ const leftContent = {
   backgroundColor: '#fff',
 }
 const rightContent = {
-  marginLeft: '25%',
   marginTop: '0.1em',
   display: 'flex',
   justifyContent: 'center',
@@ -49,7 +48,7 @@ class MainPage extends React.Component {
   render() {
     return (
       <div className="row main-page">
-        <div style={leftContent} className="col s12 l3 z-depth-1 column-news">
+        <div className="col s12 l3 z-depth-1 column-news">
           <div className="row">
             <LeftContent />
           </div>

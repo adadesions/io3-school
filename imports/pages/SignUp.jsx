@@ -14,7 +14,7 @@ const center = {
   backgroundColor: 'rgba(250,250,250,0.8)',
 };
 const sizeBoxBotton = {
-  width: '100%',
+  width: '90%',
 };
 const sizeBotton = {
   width: '100%',
@@ -78,6 +78,9 @@ const floatLeft = {
   display: 'flex',
   justifyContent: 'flex-start',
 }
+const sizeFormSignup = {
+  width: '90%',
+};
 class SignUp extends React.Component {
   constructor() {
     super();
@@ -159,7 +162,7 @@ class SignUp extends React.Component {
               <img className="img-logo" style={sizeImg} src="/images/login/logo.png"/>
             </div>
           </div>
-          <div className="row">
+          <div style={sizeFormSignup} className="row">
             <div className="input-field col s12 l12">
               <input
                 id="usernameSignup"

@@ -5,13 +5,11 @@ import MenuItemAdmin from '../../ui/components/admin/MenuItemAdmin.jsx';
 import Upload from '../../ui/components/admin/form/Upload.jsx'
 
 const leftContent = {
-  position: 'fixed',
   marginTop: '-0.2em',
   backgroundColor: '#28395d',
-  height: '41.5em',
+  height: '100vh',
 }
 const rightContent = {
-  marginLeft: '16.66667%',
   marginTop: '0.1em',
   display: 'flex',
   justifyContent: 'center',
@@ -47,14 +45,14 @@ export default class AdminSite extends React.Component {
   render() {
     return (
       <div className="row admin-site">
-        <div style={leftContent} className="col l2 z-depth-1">
+        <div style={leftContent} className="col s12 l2 z-depth-1 left-menu-admin">
           <div className="row">
             <ul className="menu-admin">
               <MenuItemAdmin />
             </ul>
           </div>
         </div>
-        <div style={rightContent} className="col l10">
+        <div style={rightContent} className="col s12 l10">
           <div style={container} className="z-depth-1">
             <div style={styleRow} className="row">
               <ul className="tabs tab-menu-admin">

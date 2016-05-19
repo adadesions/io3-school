@@ -12,7 +12,7 @@ const styleList = {
 export default class LeftContent extends React.Component {
   render() {
     return (
-      <div className="slider">
+      <div className="slider z-depth-1">
         <ul style={styleList} className="slides">
           <ItemImgSlide />
             <li className="list-img-slide">

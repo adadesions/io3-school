@@ -25,7 +25,8 @@ nav
     padding-left: 1em
     padding-right: 1em
 .slides
-  height: 34em !important
+  height: 78% !important
+  background-color: #fff
 .row
   .col.videos-detail
     padding: 0.6rem 0.3rem
@@ -136,15 +137,26 @@ nav
 .tab-menu-admin
   overflow-x: hidden
 .menu-item-admin-group
+  position: fixed
+  width: 16.66667%
+  height: 100vh
+  margin-top: -1em
+  background-color: #28395d
   .divider
     background-color: #68748d
     margin-bottom: 0
+.button-group
+  display: flex
+  justify-content: flex-end
+  .btn.green
+    margin-right: 1em
+
 /////Responsive/////
 
 $breakpoint-tablet: 992px
 $breakpoint-mobile-mini: 350px
 $breakpoint-mobile-large: 1000px
-$breakpoint-labtop: 1366px
+$breakpoint-labtop: 1367px
 $breakpoint-desktop: 1680px
 
 
@@ -173,8 +185,12 @@ $breakpoint-desktop: 1680px
 
   /////Main Page/////
   .slider
-    height: 38.3em !important
-    margin-bottom: 1em
+    background: #fff
+    position: fixed
+    width: 25%
+    height: 100% !important
+    .indicators
+      bottom: 13%
   .radius-img
     -webkit-border-bottom-right-radius: 100px
     -webkit-border-bottom-left-radius: 100px
@@ -184,10 +200,17 @@ $breakpoint-desktop: 1680px
     border-bottom-left-radius: 100px
   .list-img-slide
     width: 100% !important
-    height: 35em !important
+    height: 78% !important
+  /////Admin Site/////
 
+
+  .chip-keyword-component
+    hr
+      background-color: #000
+      border-style: outset
+      border-width: 0.1px
 /////Desktop Display/////
-@media only screen and (min-width: 1367px) and (max-width: $breakpoint-desktop)
+@media only screen and (min-width: 1367px)
   /////Login Page/////
   .style-form-login
     display: flex
@@ -211,8 +234,12 @@ $breakpoint-desktop: 1680px
 
   /////Main Page/////
   .slider
-    height: 45em !important
-    margin-bottom: 1em
+    background: #fff
+    position: fixed
+    width: 25%
+    height: 100% !important
+    .indicators
+      bottom: 10%
   .radius-img
     -webkit-border-bottom-right-radius: 90px
     -webkit-border-bottom-left-radius: 90px
@@ -221,10 +248,20 @@ $breakpoint-desktop: 1680px
     border-bottom-right-radius: 90px
     border-bottom-left-radius: 90px
   .list-img-slide
-    width: 26.8em !important
-    height: 42em !important
-  .card-mobile
-    height: 240px
+    width: 100% !important
+    height: 84% !important
+  /////Player Page//////
+  .container-player
+    height: 40rem !important
+  .style-player
+    height: 40rem !important
+    width: 72rem !important
+
+
+  /////Admin Site/////
+  .chip-keyword-component
+    hr
+      background-color: #000
 /////mobile/////
 @media only screen and (min-width: $breakpoint-mobile-mini) and (max-width: $breakpoint-mobile-large)
   /////Login Page/////
@@ -233,14 +270,14 @@ $breakpoint-desktop: 1680px
     align-items: center
     flex-flow: column
     width: 100% !important
-    height: 80em !important
+    height: 80rem !important
     border-radius: 2px
     background-color: rgba(250,250,250,0.8)
   .style-form-signup
     display: flex
     align-items: center
     flex-flow: column
-    height: 86em !important
+    height: 92rem !important
     width: 100% !important
     border-radius: 2px
     background-color: rgba(250,250,250,0.8)
@@ -335,6 +372,7 @@ $breakpoint-desktop: 1680px
     display: flex
     justify-content: flex-end
     order: 2
+    z-index: 999
   .brand-logo
     margin-left: 11.2em
     width: 100%
@@ -346,11 +384,9 @@ $breakpoint-desktop: 1680px
       height: 5em
 
   /////Main Page/////
-  .slides
-    height: 70em !important
   .slider
-    height: 74.3em !important
-    margin-bottom: 1em
+    height: 74.3rem !important
+    box-shadow: none !important
   .radius-img
     -webkit-border-bottom-right-radius: 200px
     -webkit-border-bottom-left-radius: 200px
@@ -366,6 +402,8 @@ $breakpoint-desktop: 1680px
   .column-news
     position: relative !important
     margin-top: 10em !important
+    height: 100%
+    background-color: #fff
   .column-course
     margin-left: 0em !important
   .course-container
@@ -397,3 +435,107 @@ $breakpoint-desktop: 1680px
   /////Player Page/////
   .player-page
     margin-top: 10.5em !important
+  .container-player
+    height: 39rem !important
+  .style-player
+    height: 39rem !important
+    width: 70rem !important
+  .video-name
+    font-size: 50px
+  .video-view
+    font-size: 40px !important
+  .video-description
+    font-size: 35px
+  .style-relates-video
+    font-size: 50px
+  .text-relates-item
+    font-size: 35px
+  /////Admin Site/////
+  nav
+    .brand-logo.brand-admin
+      position: fixed !important
+    .brand-logo
+      img
+        margin-left: -23rem !important
+        width: 13rem !important
+        height: auto !important
+  .admin-site
+    background: #F1F1F1
+  .left-menu-admin
+    height: auto !important
+    margin-top: 1rem !important
+    margin-bottom: 1rem !important
+    background: #F1F1F1 !important
+    box-shadow: none !important
+    .row
+      height: 2.8rem
+      margin-top: 0.1rem
+      width: 95%
+      background: #F1F1F1
+  .menu-admin
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12) !important
+    border-radius: 1rem !important
+  .menu-item-admin-group
+    position: relative !important
+    margin-top: 0.1rem !important
+    width: 100% !important
+    height: 5em !important
+    display: flex !important
+    flex-flow: row !important
+    justify-content: space-around !important
+    align-items: center
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12) !important
+    border-radius: 2px !important
+    .menu-item-admin
+      width: 100%
+      height: 100%
+      display: flex
+      align-items: center
+      justify-content: center
+      font-size: 35px
+      cursor: pointer
+  .col.s12.drop-down
+    margin-top: 3em
+  .col.s12
+    #videoName
+      font-size: 40px
+      margin-top: 1.5em
+    #description
+      font-size: 40px
+      margin-top: 1.5em
+    #videoLink
+      font-size: 40px
+      margin-top: 1.5em
+    .select-wrapper
+      font-size: 40px
+      margin-top: 1.5em
+      input.select-dropdown
+        font-size: 35px
+      ul
+        li
+          span
+            font-size: 40px
+    #catagory
+      font-size: 40px
+      margin-top: 1.5em
+    #keyword
+      margin-top: 7em !important
+    .chip.keyword
+      font-size: 30px
+      height: 1.5em
+      line-height: 1.6em
+    .button-group
+      display: flex
+      flex-flow: column
+      margin-top: 6em !important
+      margin-bottom: 2em !important
+      .btn
+        height: 2em
+        font-size: 30px
+        font-weight: bold
+      .btn.green
+        margin-right: 0
+        margin-bottom: 0.5em
+    .tab-menu-item-admin
+      a
+        font-size: 20px

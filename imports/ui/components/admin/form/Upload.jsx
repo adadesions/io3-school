@@ -17,8 +17,8 @@ export default class Upload extends React.Component {
   render() {
     return (
       <div>
-        <div className="col s2 l2"><br/></div>
-        <form className="col s8 l8">
+        <div className="col s1 l2"><br/></div>
+        <form className="col s10 l8">
           <div className="row">
             <div className="input-field col s12 l12">
               <input type="text" id="videoName" type="text" className="validate" />
@@ -32,8 +32,8 @@ export default class Upload extends React.Component {
               <input id="videoLink" type="text" className="validate" />
               <label for="videoLink">Video Link</label>
             </div>
-            <div style={styleDropdown} className="input-field col s12 l6">
-              <select defaultValue="0">
+            <div style={styleDropdown} className="input-field col s12 l6 drop-down">
+              <select defaultValue="0" id="playlist">
                 <option value="0" disabled>Choose your option</option>
                 <option value="1">Option 1</option>
                 <option value="2">Option 2</option>
@@ -41,8 +41,8 @@ export default class Upload extends React.Component {
               </select>
               <label>Playlist</label>
             </div>
-            <div style={styleDropdown} className="input-field col s12 l6">
-              <select defaultValue="0">
+            <div style={styleDropdown} className="input-field col s12 l6 drop-down">
+              <select defaultValue="0" id="catagory">
                 <option value="0" disabled>Choose your option</option>
                 <option value="1">Option 1</option>
                 <option value="2">Option 2</option>
@@ -52,13 +52,17 @@ export default class Upload extends React.Component {
             </div>
             <div className="input-field col s12 l12">
               <label for="keyword">Keyword</label>
-              <div style={itemKeyword}>
+              <div style={itemKeyword} id="keyword">
                 <ChipKeyword />
               </div>
             </div>
           </div>
+          <div className="button-group">
+            <button className="waves-effect waves-light btn green">Save</button>
+            <button className="waves-effect waves-light btn red">Cancel</button>
+          </div>
         </form>
-        <div className="col s2 l2"><br/></div>
+        <div className="col s1 l2"><br/></div>
       </div>
     )
   }

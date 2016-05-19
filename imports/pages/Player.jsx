@@ -12,7 +12,7 @@ const styleContainerPlayer = {
   display: 'flex',
   justifyContent: 'center',
   backgroundColor: '#000',
-  height: '33em',
+  height: '33rem',
 }
 const styleDetailAndRelates = {
   backgroundColor: '#eceff5',
@@ -47,19 +47,19 @@ export default class Player extends React.Component {
   render() {
     return (
       <div className="player-page" style={playerPage}>
-        <div style={styleContainerPlayer}>
+        <div style={styleContainerPlayer} className="container-player">
           {/*<VideoItem />*/}
           <VideoItemEmbed />
         </div>
         <div style={styleRow} className="row">
-          <div className="col m8 videos-detail">
+          <div className="col s12 l8 videos-detail">
             <div style={styleDetail}>
               <VideoDetail />
             </div>
           </div>
-          <div className="col m4 videos-relates">
+          <div className="col s12 l4 videos-relates">
             <div style={styleRelates}>
-              <h5 style={styleFontRelates}>Relates Videos</h5>
+              <h5 style={styleFontRelates} className="style-relates-video">Relates Videos</h5>
               <div className="divider"></div>
               <VideoRelatesItem />
             </div>

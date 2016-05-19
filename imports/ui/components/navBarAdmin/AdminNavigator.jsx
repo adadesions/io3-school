@@ -8,7 +8,7 @@ const colorNav = {
 const sizeImg = {
   marginLeft: '0.2em',
   marginTop: '0.1em',
-  width: '6em',
+  width: '5em',
   height: 'auto',
 }
 const styleDropdown = {
@@ -22,7 +22,7 @@ const styleNav = {
 export default class AdminNavigator extends React.Component {
   render() {
     return (
-      <nav style={styleNav} id="navigator">
+      <nav style={styleNav} id="navigator-admin">
         <div style={colorNav} className="nav-wrapper">
           <a href="/" className="brand-logo brand-admin"><img style={sizeImg} src="/images/navigator/logo2.png"/></a>
           <AdminAvatar/>

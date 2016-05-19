@@ -17,7 +17,7 @@ export default class VideoRelatesItem extends React.Component {
                 <img src="images/login/logo.png" className="responsive-img"/>
               </div>
               <div className="col m9">
-                <span className="black-text">
+                <span className="black-text text-relates-item">
                   This is a square image. Add the "circle" class to it to make it appear circular.
                 </span>
               </div>

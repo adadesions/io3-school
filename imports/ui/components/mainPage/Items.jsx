@@ -2,11 +2,12 @@ import React from 'react';
 import { FlowRouter } from 'meteor/kadira:flow-router';
 
 const styleCard = {
-  height: '210px',
+  height: '25%',
 }
 const styleButton = {
   display: 'flex',
   justifyContent: 'center',
+  marginBottom: '1em',
 }
 const styleTumbnail = {
   height: '7.6em',

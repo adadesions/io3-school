@@ -12,9 +12,9 @@ export default class VideoDetail extends React.Component {
   render() {
     return (
       <div>
-        <h5 style={styleFontName}>Video Name</h5>
-        <h6 style={styleFontView}>View : </h6>
-        <h6>Discription : </h6>
+        <h5 style={styleFontName} className="video-name">Video Name</h5>
+        <h6 style={styleFontView} className="video-view">View : </h6>
+        <h6 className="video-description">Discription : </h6>
       </div>
     )
   }
