@@ -340,8 +340,8 @@ $breakpoint-desktop: 1680px
     h6
       font-size: 40px
   .btn-floating.btn-large.style-signup-button
-    margin-right: -8.3em
-    margin-top: 13em
+    margin-right: -8.3rem
+    margin-top: 13rem
     width: 13em
     height: 13em
     i
@@ -356,8 +356,11 @@ $breakpoint-desktop: 1680px
     height: 15em
     width: 100%
   .nav-wrapper
-    display: flex
+    display: flex !important
     flex-flow: column
+    z-index: -1
+  .menu-nav.tabs
+    position: initial !important
   .menu-nav
     width: 100% !important
     height: 45% !important
@@ -369,20 +372,27 @@ $breakpoint-desktop: 1680px
       font-size: 40px
       margin-bottom: 1em
   .avatar-nav
+    position: relative
     display: flex
     justify-content: flex-end
     order: 2
     z-index: 999
+    #dropdown1
+      z-index: 999
+      li
+        z-index: 999
+        a
+          z-index: 999
   .brand-logo
     margin-left: 11.2em
     width: 100%
     display: flex
     justify-content: center
     order: 1
+
     img
       width: 12em !important
       height: 5em
-
   /////Main Page/////
   .slider
     height: 74.3rem !important
@@ -454,7 +464,7 @@ $breakpoint-desktop: 1680px
   nav
     .brand-logo.brand-admin
       position: fixed !important
-    .brand-logo
+    .brand-logo.brand-admin
       img
         margin-left: -23rem !important
         width: 13rem !important

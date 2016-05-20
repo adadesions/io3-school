@@ -1,4 +1,4 @@
-import React, { PropTypes } from 'react';
+  import React, { PropTypes } from 'react';
 import { Meteor } from 'meteor/meteor';
 
 const styleAvatar = {
@@ -27,7 +27,7 @@ export default class Avatar extends React.Component {
   render() {
     return(
       <ul id="nav-mobile" className="avatar-nav">
-        <li><a className="dropdown-button" href="#!" data-activates="dropdown1">
+        <li><a className="dropdown-button" href="" data-activates="dropdown1">
           <div style={styleAvatar} className="large chip">
             <img src="/images/navigator/avatar.jpg"/>
             { this.props.username }
@@ -35,13 +35,13 @@ export default class Avatar extends React.Component {
           <i className="material-icons right">arrow_drop_down</i>
         </a></li>
       <ul id="dropdown1" className="dropdown-content avatar">
-          <li><a href="#!">Profile (Comming Soon)</a></li>
+          <li><a href="">Profile (Comming Soon)</a></li>
           <hr/>
           <li><a href="" onClick={this.onClickAdminSite}>Admin Site</a></li>
           <hr/>
           <li>
             <a
-              href="#!"
+              href=""
               onClick={ this.onClickLogOut }
             >
               Logout
