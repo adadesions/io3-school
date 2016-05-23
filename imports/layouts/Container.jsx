@@ -11,7 +11,6 @@ export default class Container extends React.Component{
       <div>
         <Navigator />
         <br/><br/><br/>
-        <LeftContent />
         {this.props.content}
       </div>
     )

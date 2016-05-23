@@ -1,5 +1,7 @@
 import React from 'react';
 
+import LeftContent from '../leftContent/LeftContent.jsx';
+
 const rightContent = {
   marginTop: '0.1em',
   display: 'flex',
@@ -40,7 +42,7 @@ export default class ContentBankAccount extends React.Component {
       <div className="row main-page">
         <div className="col s12 l3 z-depth-1 column-news">
           <div className="row">
-
+            <LeftContent />
           </div>
         </div>
         <div style={rightContent} className="col s12 l9 column-annountment">

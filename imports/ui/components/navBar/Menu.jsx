@@ -14,7 +14,7 @@ export default class Menu extends React.Component {
   }
 
   onClickAllCourse() {
-    FlowRouter.go('course');
+    FlowRouter.go('mainpage');
   }
 
   onClickDonate() {

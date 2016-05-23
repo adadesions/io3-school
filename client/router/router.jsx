@@ -9,7 +9,6 @@ import Login from '../../imports/pages/Login.jsx';
 import SignUp from '../../imports/pages/SignUp.jsx';
 import MainPage from '../../imports/pages/MainPage.jsx';
 import Player from '../../imports/pages/Player.jsx';
-import ContentCourse from '../../imports/ui/components/mainPage/rightContent/ContentCourse.jsx';
 import ContentBankAccount from '../../imports/ui/components/mainPage/rightContent/ContentBankAccount.jsx';
 
 import AdminContainer from '../../imports/layouts/AdminContainer.jsx';
@@ -49,15 +48,6 @@ schoolRouter.route('/school', {
   action() {
     mount(Container, {
       content: <MainPage />,
-    });
-  },
-});
-
-schoolRouter.route('/course', {
-  name: 'course',
-  action() {
-    mount(Container, {
-      content: <ContentCourse />,
     });
   },
 });
