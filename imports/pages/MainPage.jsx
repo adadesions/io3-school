@@ -20,23 +20,10 @@ class MainPage extends React.Component {
     });
   }
 
-  renderComponent() {
-    if($('.go-all-course').click()){
-      return <ContentCourse />;
-    }
-    else
-      return <ContentBankAccount />;
-  }
-
   render() {
     return (
       <div className="row main-page">
-        <div className="col s12 l3 z-depth-1 column-news">
-          <div className="row">
-            <LeftContent />
-          </div>
-        </div>
-        {this.renderComponent()}
+        <ContentCourse />
       </div>
     )
   }

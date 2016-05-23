@@ -1,9 +1,8 @@
 import React from 'react';
 
 import Navigator from '../ui/components/navBar/Navigator.jsx';
-import LeftContent from '../ui/components/mainPage/leftContent/LeftContent.jsx';
 
-export default class Container extends React.Component{
+export default class VideoContainer extends React.Component{
   // mixins: [ReactMeteorData],
 
   render(){
@@ -11,7 +10,6 @@ export default class Container extends React.Component{
       <div>
         <Navigator />
         <br/><br/><br/>
-        <LeftContent />
         {this.props.content}
       </div>
     )
