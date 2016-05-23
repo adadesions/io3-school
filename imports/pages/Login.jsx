@@ -122,7 +122,7 @@ class Login extends React.Component {
             </div>
           </div>
           <div style={sizeFormLogin} className="row">
-            <div className="input-field col s12 l12 input-login">
+            <div className="input-field col s12 l12 input-login email-login">
               <input
                 id="username"
                 ref="username"
@@ -141,7 +141,7 @@ class Login extends React.Component {
               <label htmlFor="password">Password</label>
             </div>
           </div>
-          <div style={sizeBoxBotton} className="row">
+          <div style={sizeBoxBotton} className="row button-group-login">
             <div className="input-field col s12 l12">
               <button
                 id="btnLogin"

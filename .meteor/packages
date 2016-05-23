@@ -19,8 +19,10 @@ ecmascript              # Enable ECMAScript2015+ syntax in app code
 kadira:flow-router
 react-meteor-data
 fourseven:scss
-poetic:materialize-scss
 fortawesome:fontawesome
 accounts-base
 accounts-password
 session
+poetic:materialize-scss
+semantic:ui-popup
+semantic:ui-transition
