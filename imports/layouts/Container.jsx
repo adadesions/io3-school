@@ -9,7 +9,7 @@ export default class Container extends React.Component{
     return(
       <div>
         <Navigator />
-        <br/><br/><br/>  
+        <br/><br/><br/>
         {this.props.content}
       </div>
     )

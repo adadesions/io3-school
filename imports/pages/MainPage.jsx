@@ -9,7 +9,8 @@ import ContentCourse from '../ui/components/mainPage/rightContent/ContentCourse.
 import ContentBankAccount from '../ui/components/mainPage/rightContent/ContentBankAccount.jsx';
 
 class MainPage extends React.Component {
-  componentDidMount(){
+
+  componentDidMount() {
     $(document).ready(function(){
       $('.slider').slider({
                             full_width: true,
@@ -18,6 +19,15 @@ class MainPage extends React.Component {
                           });
     });
   }
+
+  renderComponent() {
+    if($('.go-all-course').click()){
+      return <ContentCourse />;
+    }
+    else
+      return <ContentBankAccount />;
+  }
+
   render() {
     return (
       <div className="row main-page">
@@ -26,8 +36,7 @@ class MainPage extends React.Component {
             <LeftContent />
           </div>
         </div>
-        <ContentCourse />
-        {/*<ContentBankAccount />*/}
+        {this.renderComponent()}
       </div>
     )
   }
