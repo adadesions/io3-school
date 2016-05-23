@@ -26,7 +26,7 @@ nav
     padding-right: 1em
 .slides
   height: 78% !important
-  background-color: #fff
+  background-color: #fff !important
 .row
   .col.videos-detail
     padding: 0.6rem 0.3rem
@@ -36,6 +36,10 @@ nav
 .row
   .col.tumbnail-relates
     padding: 0 0.1rem
+.row
+  .col.tumbnail-bank-account
+    padding: 0 0.1rem
+    margin-left: 1.5rem
 .card
   .card-content.detail-tumbnail
     padding: 0
@@ -53,7 +57,17 @@ nav
 .divider
   margin-bottom: 0.4em
 
-
+.annountment-container
+  img
+    width: auto
+    height: 8em
+  .row.bank-account
+    margin-bottom: 0
+.donate-btn
+  display: flex
+  justify-content: center
+  a
+    font-weight: bold
 /////Navigator/////
 
 .menu-nav
@@ -72,19 +86,25 @@ nav
     height: 100% !important
   .indicator
     background-color: #F44336 !important
-.dropdown-content.avatar
-  top: 4.29em !important
+.ui.bottom.right.popup.menu-avatar
   background-color: #212121
+  margin-right: 0.5em
+.ui.bottom.right.popup.menu-avatar:before
+  background-color: #212121
+  border: 1px solid #212121
+.ui.bottom.right.popup.menu-avatar
+  background-color: #212121
+  border-radius: 2px
+  border: 1px solid #212121
   hr
     border-color: #333
     box-shadow: inset 0 0 10px #000000
     margin-bottom: 0
-  li
-    a
-      color: #fff
-      font-weight: bold
-  li:hover
-    background: rgba(0,0,0,0.2)
+  a
+    color: #fff
+    font-weight: bold
+    text-align: center
+    font-size: 20px
 
 /////Scroll Bar/////
 #style-1::-webkit-scrollbar-track
@@ -161,20 +181,20 @@ $breakpoint-desktop: 1680px
 
 
 /////Labtop Display/////
-@media only screen and (min-width: 1001px) and (max-width: $breakpoint-labtop)
+@media only screen and (min-device-width: 1001px) and (max-device-width: $breakpoint-labtop)
   /////Login Page/////
   .style-form-login
     display: flex
     align-items: center
     flex-flow: column
-    height: 35em
+    height: 35rem
     border-radius: 2px
     background-color: rgba(250,250,250,0.8)
   .style-form-signup
     display: flex
     align-items: center
     flex-flow: column
-    height: 42em !important
+    height: 47.5rem !important
     border-radius: 2px
     background-color: rgba(250,250,250,0.8)
   .btn-floating.btn-large.style-signup-button
@@ -210,20 +230,20 @@ $breakpoint-desktop: 1680px
       border-style: outset
       border-width: 0.1px
 /////Desktop Display/////
-@media only screen and (min-width: 1367px)
+@media only screen and (min-device-width: 1368px)
   /////Login Page/////
   .style-form-login
     display: flex
     align-items: center
     flex-flow: column
-    height: 36em
+    height: 36rem
     border-radius: 2px
     background-color: rgba(250,250,250,0.8)
   .style-form-signup
     display: flex
     align-items: center
     flex-flow: column
-    height: 44em !important
+    height: 49.5rem !important
     border-radius: 2px
     background-color: rgba(250,250,250,0.8)
   .btn-floating.btn-large.style-signup-button
@@ -262,8 +282,8 @@ $breakpoint-desktop: 1680px
   .chip-keyword-component
     hr
       background-color: #000
-/////mobile/////
-@media only screen and (min-width: $breakpoint-mobile-mini) and (max-width: $breakpoint-mobile-large)
+/////mobile large/////
+@media only screen and (min-device-width: 351px) and (max-device-width: $breakpoint-mobile-large) and (-webkit-min-device-pixel-ratio: 2)
   /////Login Page/////
   .style-form-login
     display: flex
@@ -277,7 +297,7 @@ $breakpoint-desktop: 1680px
     display: flex
     align-items: center
     flex-flow: column
-    height: 92rem !important
+    height: 97.5rem !important
     width: 100% !important
     border-radius: 2px
     background-color: rgba(250,250,250,0.8)
@@ -352,6 +372,7 @@ $breakpoint-desktop: 1680px
   nav
     .brand-logo.brand-ada
       position: fixed !important
+      z-index: 0
   #navigator
     height: 15em
     width: 100%
@@ -377,12 +398,315 @@ $breakpoint-desktop: 1680px
     justify-content: flex-end
     order: 2
     z-index: 999
-    #dropdown1
+  ul#dropdown1.dropdown-content.avatar
+    z-index: 9999
+    li
       z-index: 999
-      li
+      a
         z-index: 999
-        a
-          z-index: 999
+  .brand-logo
+    margin-left: 11.2em
+    width: 100%
+    display: flex
+    justify-content: center
+    order: 1
+
+    img
+      width: 12em !important
+      height: 5em
+  /////Main Page/////
+  .slider
+    height: 74.3rem !important
+    box-shadow: none !important
+  .radius-img
+    -webkit-border-bottom-right-radius: 200px
+    -webkit-border-bottom-left-radius: 200px
+    -moz-border-radius-bottomright: 200px
+    -moz-border-radius-bottomleft: 200px
+    border-bottom-right-radius: 200px
+    border-bottom-left-radius: 200px
+  .list-img-slide
+    width: 100% !important
+    height: auto !important
+    h5
+      font-size: 60px
+  .column-news
+    position: relative !important
+    margin-top: 10em !important
+    height: 100%
+    background-color: #fff
+  .column-course
+    margin-left: 0em !important
+  .course-container
+    width: 100% !important
+    h4.course-header
+      font-size: 60px
+    .divider
+      margin-bottom: 1.5em
+  .column-annountment
+    margin-left: 0em !important
+  .annountment-container
+    width: 100% !important
+    h4.annountment-header
+      font-size: 60px
+    .divider
+      margin-bottom: 1.5em
+  .card-mobile
+    height: 430px !important
+    margin: 1em
+    margin-bottom: 1em
+  .tumbnail-img
+    height: 17em important
+  .detail-tumbnail
+    padding-top: 1em !important
+    .card-title
+      font-size: 50px
+    i
+      font-size: 45px
+      padding-top: 0 !important
+    i.icon-play
+      line-height: 1.2em
+      font-size: 5em
+    .btn-floating
+      width: 6em
+      height: 6em
+      margin-top: 0.5em
+  /////Player Page/////
+  .player-page
+    margin-top: 10.5em !important
+  .container-player
+    height: 39rem !important
+  .style-player
+    height: 39rem !important
+    width: 70rem !important
+  .video-name
+    font-size: 50px
+  .video-view
+    font-size: 40px !important
+  .video-description
+    font-size: 35px
+  .style-relates-video
+    font-size: 50px
+  .text-relates-item
+    font-size: 35px
+  .text-bank-account
+    font-size: 35px
+  /////Admin Site/////
+  nav
+    .brand-logo.brand-admin
+      position: fixed !important
+    .brand-logo.brand-admin
+      img
+        margin-left: -23rem !important
+        width: 13rem !important
+        height: auto !important
+  .admin-site
+    background: #F1F1F1
+  .left-menu-admin
+    height: auto !important
+    margin-top: 1rem !important
+    margin-bottom: 1rem !important
+    background: #F1F1F1 !important
+    box-shadow: none !important
+    .row
+      height: 2.8rem
+      margin-top: 0.1rem
+      width: 95%
+      background: #F1F1F1
+  .menu-admin
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12) !important
+    border-radius: 1rem !important
+  .menu-item-admin-group
+    position: relative !important
+    margin-top: 0.1rem !important
+    width: 100% !important
+    height: 5em !important
+    display: flex !important
+    flex-flow: row !important
+    justify-content: space-around !important
+    align-items: center
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12) !important
+    border-radius: 2px !important
+    .menu-item-admin
+      width: 100%
+      height: 100%
+      display: flex
+      align-items: center
+      justify-content: center
+      font-size: 35px
+      cursor: pointer
+  .col.s12.drop-down
+    margin-top: 3em
+  .col.s12
+    #videoName
+      font-size: 40px
+      margin-top: 1.5em
+    #description
+      font-size: 40px
+      margin-top: 1.5em
+    #videoLink
+      font-size: 40px
+      margin-top: 1.5em
+    .select-wrapper
+      font-size: 40px
+      margin-top: 1.5em
+      input.select-dropdown
+        font-size: 35px
+      ul
+        li
+          span
+            font-size: 40px
+    #catagory
+      font-size: 40px
+      margin-top: 1.5em
+    #keyword
+      margin-top: 7em !important
+    .chip.keyword
+      font-size: 30px
+      height: 1.5em
+      line-height: 1.6em
+    .button-group
+      display: flex
+      flex-flow: column
+      margin-top: 6em !important
+      margin-bottom: 2em !important
+      .btn
+        height: 2em
+        font-size: 30px
+        font-weight: bold
+      .btn.green
+        margin-right: 0
+        margin-bottom: 0.5em
+    .tab-menu-item-admin
+      a
+        font-size: 20px
+
+
+/////mobile small/////
+@media only screen and (min-device-width: 100px) and (max-device-width: $breakpoint-mobile-mini)
+  /////Login Page/////
+  .style-form-login
+    display: flex
+    align-items: center
+    flex-flow: column
+    width: 100% !important
+    height: 75rem !important
+    border-radius: 2px
+    background-color: rgba(250,250,250,0.8)
+  .style-form-signup
+    display: flex
+    align-items: center
+    flex-flow: column
+    height: 97.5rem !important
+    width: 100% !important
+    border-radius: 2px
+    background-color: rgba(250,250,250,0.8)
+  .img-logo
+    margin-top: 6em !important
+    margin-bottom: 2em
+    width: 12em !important
+  .col.s12.input-login.email-login
+    margin-top: 10em
+  .col.s12
+    #username
+      font-size: 40px
+      margin-top: 1.5em
+    #password
+      font-size: 40px
+      margin-top: 1.5em
+    #usernameSignup
+      font-size: 40px
+      line-height: 0px
+      margin-top: 1.5em
+    #email
+      font-size: 40px
+      line-height: 0px
+      margin-top: 1.5em
+    #passwordSignup
+      font-size: 40px
+      margin-top: 1.5em
+    #rePassword
+      font-size: 40px
+      margin-top: 1.5em
+    #btnLogin
+      height: 2.5em
+      font-size: 35px
+      margin-top: 1em
+    #btnLoginFacebook
+      height: 2.5em
+      font-size: 35px
+      margin-top: 1em
+      i
+        font-size: 2.5rem
+        margin-left: 12rem
+    #btnSignup
+      height: 2.5em
+      font-size: 35px
+    #btnBack
+      height: 2.5em
+      font-size: 35px
+    label.term-condition
+      font-size: 40px
+      margin-top: 1em
+      margin-bottom: 1em
+    label
+      font-size: 50px
+    label.active
+      transform: translateY(-60%)
+      font-size: 40px
+  .button-group-login
+    margin-top: 15em !important
+  .forget-password
+    display: flex
+    align-items: flex-end
+    height: 10%
+    h6
+      font-size: 40px
+  .btn-floating.btn-large.style-signup-button
+    margin-right: -8.3rem
+    margin-top: 25rem
+    width: 13em
+    height: 13em
+    i
+      font-size: 6.2em !important
+
+
+  /////Navigator/////
+  nav
+    .brand-logo.brand-ada
+      position: fixed !important
+      z-index: 0
+  #navigator
+    height: 15em
+    width: 100%
+  .nav-wrapper
+    display: flex !important
+    flex-flow: column
+    z-index: -1
+  .menu-nav.tabs
+    position: initial !important
+  .menu-nav
+    width: 100% !important
+    height: 45% !important
+    display: flex
+    justify-content: space-around
+    margin-bottom: 1em
+    order: 3
+    a
+      font-size: 40px
+      margin-bottom: 1em
+  .avatar-nav
+    position: relative
+    display: flex
+    justify-content: flex-end
+    order: 2
+    z-index: 999
+  ul#dropdown1.dropdown-content.avatar
+    z-index: 9999
+    li
+      z-index: 999
+      a
+        z-index: 999
   .brand-logo
     margin-left: 11.2em
     width: 100%
@@ -459,6 +783,8 @@ $breakpoint-desktop: 1680px
   .style-relates-video
     font-size: 50px
   .text-relates-item
+    font-size: 35px
+  .text-bank-account
     font-size: 35px
   /////Admin Site/////
   nav

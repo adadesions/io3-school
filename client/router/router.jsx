@@ -4,10 +4,12 @@ import { FlowRouter } from 'meteor/kadira:flow-router';
 
 import Container from '../../imports/layouts/Container.jsx'
 import LoginContainer from '../../imports/layouts/LoginContainer.jsx'
+import VideoContainer from '../../imports/layouts/VideoContainer.jsx'
 import Login from '../../imports/pages/Login.jsx';
 import SignUp from '../../imports/pages/SignUp.jsx';
 import MainPage from '../../imports/pages/MainPage.jsx';
 import Player from '../../imports/pages/Player.jsx';
+import ContentBankAccount from '../../imports/ui/components/mainPage/rightContent/ContentBankAccount.jsx';
 
 import AdminContainer from '../../imports/layouts/AdminContainer.jsx';
 import AdminSite from '../../imports/pages/admin/AdminSite.jsx';
@@ -50,10 +52,19 @@ schoolRouter.route('/school', {
   },
 });
 
+schoolRouter.route('/bankaccount', {
+  name: 'bankaccount',
+  action() {
+    mount(Container, {
+      content: <ContentBankAccount />,
+    });
+  },
+})
+
 schoolRouter.route('/player', {
   name: 'player',
   action() {
-    mount(Container, {
+    mount(VideoContainer, {
       content: <Player />,
     });
   },

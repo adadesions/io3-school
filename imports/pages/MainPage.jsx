@@ -4,23 +4,14 @@ import { createContainer } from 'meteor/react-meteor-data';
 
 // Components
 import Navigator from '../ui/components/navBar/Navigator.jsx';
-import Items from '../ui/components/mainPage/Items.jsx';
 import LeftContent from '../ui/components/mainPage/leftContent/LeftContent.jsx';
+import Items from '../ui/components/mainPage/Items.jsx';
 
-const leftContent = {
-  position: 'fixed',
-  marginTop: '-0.2em',
-  backgroundColor: '#fff',
-}
 const rightContent = {
   marginTop: '0.1em',
   display: 'flex',
   justifyContent: 'center',
   paddingTop: '1em',
-}
-const center = {
-  textAlign: 'center',
-  padding: '3em',
 }
 const styleRow = {
   marginLeft: 'none',
@@ -35,8 +26,10 @@ const styleHeader = {
   margin: '0px',
   marginBottom: '0.25em',
 }
+
 class MainPage extends React.Component {
-  componentDidMount(){
+
+  componentDidMount() {
     $(document).ready(function(){
       $('.slider').slider({
                             full_width: true,
@@ -45,6 +38,7 @@ class MainPage extends React.Component {
                           });
     });
   }
+
   render() {
     return (
       <div className="row main-page">
