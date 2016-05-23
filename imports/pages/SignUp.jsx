@@ -30,7 +30,7 @@ const sizeBottonCancel = {
 const alignCenter = {
   display: 'flex',
   alignItems: 'center',
-  height: '100vh',
+  height: '115vh',
   background: 'url("/images/login/background.jpg")',
   backgroundSize: 'cover',
   marginBottom: 'none',
@@ -95,6 +95,10 @@ class SignUp extends React.Component {
 
   componentDidMount(){
     $(document.body).on('keydown', this.onKeyDownSignup);
+
+    $(document).ready(function() {
+      $('select').material_select();
+    });
   }
 
   onKeyDownSignup(e) {
@@ -198,6 +202,14 @@ class SignUp extends React.Component {
                 className="validate"
               />
             <label htmlFor="rePassword">Re-Password</label>
+            </div>
+            <div className="input-field col s12">
+              <select defaultValue="default">
+                <option value="default" disabled>Choose your option</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+              </select>
+              <label>Gender</label>
             </div>
             <div className="input-field col s12 l12">
               <p>

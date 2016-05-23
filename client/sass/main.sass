@@ -36,6 +36,10 @@ nav
 .row
   .col.tumbnail-relates
     padding: 0 0.1rem
+.row
+  .col.tumbnail-bank-account
+    padding: 0 0.1rem
+    margin-left: 1.5rem
 .card
   .card-content.detail-tumbnail
     padding: 0
@@ -53,7 +57,17 @@ nav
 .divider
   margin-bottom: 0.4em
 
-
+.annountment-container
+  img
+    width: auto
+    height: 8em
+  .row.bank-account
+    margin-bottom: 0
+.donate-btn
+  display: flex
+  justify-content: center
+  a
+    font-weight: bold
 /////Navigator/////
 
 .menu-nav
@@ -74,7 +88,7 @@ nav
     background-color: #F44336 !important
 .ui.bottom.right.popup.menu-avatar
   background-color: #212121
-  margin-right: 0.5em  
+  margin-right: 0.5em
 .ui.bottom.right.popup.menu-avatar:before
   background-color: #212121
   border: 1px solid #212121
@@ -173,14 +187,14 @@ $breakpoint-desktop: 1680px
     display: flex
     align-items: center
     flex-flow: column
-    height: 35em
+    height: 35rem
     border-radius: 2px
     background-color: rgba(250,250,250,0.8)
   .style-form-signup
     display: flex
     align-items: center
     flex-flow: column
-    height: 42em !important
+    height: 47.5rem !important
     border-radius: 2px
     background-color: rgba(250,250,250,0.8)
   .btn-floating.btn-large.style-signup-button
@@ -222,14 +236,14 @@ $breakpoint-desktop: 1680px
     display: flex
     align-items: center
     flex-flow: column
-    height: 36em
+    height: 36rem
     border-radius: 2px
     background-color: rgba(250,250,250,0.8)
   .style-form-signup
     display: flex
     align-items: center
     flex-flow: column
-    height: 44em !important
+    height: 49.5rem !important
     border-radius: 2px
     background-color: rgba(250,250,250,0.8)
   .btn-floating.btn-large.style-signup-button
@@ -283,7 +297,7 @@ $breakpoint-desktop: 1680px
     display: flex
     align-items: center
     flex-flow: column
-    height: 92rem !important
+    height: 97.5rem !important
     width: 100% !important
     border-radius: 2px
     background-color: rgba(250,250,250,0.8)
@@ -429,6 +443,14 @@ $breakpoint-desktop: 1680px
       font-size: 60px
     .divider
       margin-bottom: 1.5em
+  .column-annountment
+    margin-left: 0em !important
+  .annountment-container
+    width: 100% !important
+    h4.annountment-header
+      font-size: 60px
+    .divider
+      margin-bottom: 1.5em
   .card-mobile
     height: 430px !important
     margin: 1em
@@ -466,6 +488,8 @@ $breakpoint-desktop: 1680px
   .style-relates-video
     font-size: 50px
   .text-relates-item
+    font-size: 35px
+  .text-bank-account
     font-size: 35px
   /////Admin Site/////
   nav
@@ -573,7 +597,7 @@ $breakpoint-desktop: 1680px
     display: flex
     align-items: center
     flex-flow: column
-    height: 92rem !important
+    height: 97.5rem !important
     width: 100% !important
     border-radius: 2px
     background-color: rgba(250,250,250,0.8)
@@ -759,6 +783,8 @@ $breakpoint-desktop: 1680px
   .style-relates-video
     font-size: 50px
   .text-relates-item
+    font-size: 35px
+  .text-bank-account
     font-size: 35px
   /////Admin Site/////
   nav
