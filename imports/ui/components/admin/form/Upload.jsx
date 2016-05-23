@@ -58,8 +58,8 @@ export default class Upload extends React.Component {
             </div>
           </div>
           <div className="button-group">
-            <button className="waves-effect waves-light btn green">Save</button>
-            <button className="waves-effect waves-light btn red">Cancel</button>
+            <button type="button" className="waves-effect waves-light btn green">Save</button>
+            <button type="button" className="waves-effect waves-light btn red">Cancel</button>
           </div>
         </form>
         <div className="col s1 l2"><br/></div>
