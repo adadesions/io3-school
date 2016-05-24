@@ -52,14 +52,14 @@ export default class ContentBankAccount extends React.Component {
         <div style={rightContent} className="col s12 l9 column-annountment">
           <div style={container} className="z-depth-1 annountment-container">
             <div style={styleRow} className="row">
-              <h4 className="annountment-header" style={styleHeader}>Announcements</h4>
+              <h4 className="annountment-header" style={styleHeader}>Become our sponsors</h4>
               <div className="divider"></div>
               <div style={styleRowImg}>
                 <img className="topic-logo" src="/images/login/logo.png"/>
               </div>
               <div className="topic">
                 <span>
-                  
+
                 </span>
               </div>
               <div className="donate-form">
@@ -81,7 +81,7 @@ export default class ContentBankAccount extends React.Component {
               </div>
             </div>
             <div style={styleRow} className="row">
-              <h4 className="annountment-header" style={styleHeader}>Bank Account</h4>
+              <h4 className="annountment-header" style={styleHeader}>Donate by Transfer</h4>
               <div className="divider"></div>
                 <div className="card-panel">
                   <div className="row valign-wrapper bank-account">
@@ -90,19 +90,19 @@ export default class ContentBankAccount extends React.Component {
                     </div>
                     <div className="col m9">
                       <span className="black-text text-bank-account">
-                        <h5>Bank Name : </h5>
+                        <h5>Bank Name : ธนาคารกสิกรไทย ( Kasikorn Bank ) </h5>
                       </span>
                       <span className="black-text text-bank-account">
-                        <h5>Bank Account : </h5>
+                        <h5>Account Name : นายอาคาเณย์ ขมิ้นเครือ ( Mr.Arkane Kaminkure )</h5>
                       </span>
                       <span className="black-text text-bank-account">
-                        <h5>Branch : </h5>
+                        <h5>Bank Account : 630-2-18386-2</h5>
                       </span>
                       <span className="black-text text-bank-account">
-                        <h5>Type Account : </h5>
+                        <h5>Branch : จามจุรีสแควร์ ( Chamchuri Square )</h5>
                       </span>
                       <span className="black-text text-bank-account">
-                        <h5>Account Name : </h5>
+                        <h5>Type Account : ออมทรัพย์ ( Saving )</h5>
                       </span>
                     </div>
                   </div>
