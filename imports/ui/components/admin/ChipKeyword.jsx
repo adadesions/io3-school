@@ -75,6 +75,12 @@ export default class ChipKeyword extends React.Component {
   render() {
     return (
       <div className="chip-keyword-component">
+        <input
+          ref="chipOutput"
+          id="chipOutput"
+          type="hidden"
+          value={ this.state.keywords }
+        />
         { this.getKeyWordChips() }
         <input
           ref="chipInput"
