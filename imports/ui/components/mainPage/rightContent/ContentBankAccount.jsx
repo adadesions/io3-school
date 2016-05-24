@@ -35,6 +35,10 @@ export default class ContentBankAccount extends React.Component {
                             Interval: 0.1
                           });
     });
+
+    $(document).ready(function() {
+      $('select').material_select();
+    });
   }
 
   render() {
@@ -51,7 +55,29 @@ export default class ContentBankAccount extends React.Component {
               <h4 className="annountment-header" style={styleHeader}>Annountment</h4>
               <div className="divider"></div>
               <div style={styleRowImg}>
-                <img src="/images/login/logo.png"/>
+                <img className="topic-logo" src="/images/login/logo.png"/>
+              </div>
+              <div className="topic">
+                <span>
+                  
+                </span>
+              </div>
+              <div className="donate-form">
+                <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                  <input type="hidden" name="cmd" value="_s-xclick"/>
+                  <input type="hidden" name="hosted_button_id" value="2AA9KDKMMSC5J"/>
+                  <div className="input-field col s12">
+                    <select name="os0">
+                      <option value="Friendship">Friendship ฿315.00 THB</option>
+                      <option value="Sliver Sponsorship">Sliver Sponsorship ฿1,024.00 THB</option>
+                      <option value="Gold Sponsorship">Gold Sponsorship ฿3,500.00 THB</option>
+                      <option value="Vibranium Sponsorship">Vibranium Sponsorship ฿20,000.00 THB</option>
+                    </select>
+                  </div>
+                  <input type="hidden" name="currency_code" value="THB"/>
+                  <button className="waves-effect waves-light btn yellow darken-2" name="submit" type="submit">Donate</button>
+                  <img alt="" border="0" src="https://www.paypalobjects.com/en_GB/i/scr/pixel.gif" width="1" height="1"/>
+                </form>
               </div>
             </div>
             <div style={styleRow} className="row">
@@ -60,7 +86,7 @@ export default class ContentBankAccount extends React.Component {
                 <div className="card-panel">
                   <div className="row valign-wrapper bank-account">
                     <div className="col m3 tumbnail-bank-account">
-                      <img src="images/mainPage/bank-pic.png" className="responsive-img"/>
+                      <img className="bank-logo" src="images/mainPage/bank-pic.jpg"/>
                     </div>
                     <div className="col m9">
                       <span className="black-text text-bank-account">
@@ -80,9 +106,6 @@ export default class ContentBankAccount extends React.Component {
                       </span>
                     </div>
                   </div>
-                </div>
-                <div className="donate-btn">
-                  <a className="waves-effect waves-light btn yellow darken-2">Donate</a>
                 </div>
             </div>
           </div>
