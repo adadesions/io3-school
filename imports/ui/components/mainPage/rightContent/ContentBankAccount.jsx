@@ -52,7 +52,7 @@ export default class ContentBankAccount extends React.Component {
         <div style={rightContent} className="col s12 l9 column-annountment">
           <div style={container} className="z-depth-1 annountment-container">
             <div style={styleRow} className="row">
-              <h4 className="annountment-header" style={styleHeader}>Annountment</h4>
+              <h4 className="annountment-header" style={styleHeader}>Announcements</h4>
               <div className="divider"></div>
               <div style={styleRowImg}>
                 <img className="topic-logo" src="/images/login/logo.png"/>

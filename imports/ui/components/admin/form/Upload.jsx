@@ -1,5 +1,6 @@
 import React from 'react';
 
+// Components
 import ChipKeyword from '../ChipKeyword.jsx';
 
 const styleForm = {
@@ -14,6 +15,20 @@ const itemKeyword = {
 }
 
 export default class Upload extends React.Component {
+  constructor() {
+    super();
+    this.onClickSave = this.onClickSave.bind(this);
+  }
+
+  onClickSave() {
+    const videoName = this.refs.videoName.value;
+    const videoLink = this.refs.videoLink.value;
+    const playlist = this.refs.playlist.value;
+
+    const keywords = $('#chipOutput').val();
+    console.log(playlist);
+  }
+
   render() {
     return (
       <div>
@@ -21,19 +36,19 @@ export default class Upload extends React.Component {
         <form className="col s10 l8">
           <div className="row">
             <div className="input-field col s12 l12">
-              <input type="text" id="videoName" type="text" className="validate" />
+              <input ref="videoName" type="text" id="videoName" type="text" className="validate" />
               <label for="videoName">Video Name</label>
             </div>
             <div className="input-field col s12">
-              <textarea id="description" className="materialize-textarea validate"></textarea>
+              <textarea ref="description" id="description" className="materialize-textarea validate"></textarea>
               <label for="description">Description</label>
             </div>
             <div className="input-field col s12 l12">
-              <input id="videoLink" type="text" className="validate" />
+              <input ref="videoLink" id="videoLink" type="text" className="validate" />
               <label for="videoLink">Video Link</label>
             </div>
             <div style={styleDropdown} className="input-field col s12 l6 drop-down">
-              <select defaultValue="0" id="playlist">
+              <select ref="playlist" defaultValue="0" id="playlist">
                 <option value="0" disabled>Choose your option</option>
                 <option value="1">Option 1</option>
                 <option value="2">Option 2</option>
@@ -42,7 +57,7 @@ export default class Upload extends React.Component {
               <label>Playlist</label>
             </div>
             <div style={styleDropdown} className="input-field col s12 l6 drop-down">
-              <select defaultValue="0" id="catagory">
+              <select ref="catagory" defaultValue="0" id="catagory">
                 <option value="0" disabled>Choose your option</option>
                 <option value="1">Option 1</option>
                 <option value="2">Option 2</option>
@@ -58,7 +73,12 @@ export default class Upload extends React.Component {
             </div>
           </div>
           <div className="button-group">
-            <button type="button" className="waves-effect waves-light btn green">Save</button>
+            <button
+              type="button"
+              className="waves-effect waves-light btn green"
+              onClick={ this.onClickSave }
+            >Save
+            </button>
             <button type="button" className="waves-effect waves-light btn red">Cancel</button>
           </div>
         </form>
