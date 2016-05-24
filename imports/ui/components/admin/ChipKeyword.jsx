@@ -77,6 +77,7 @@ export default class ChipKeyword extends React.Component {
       <div className="chip-keyword-component">
         { this.getKeyWordChips() }
         <input
+          className="validate"
           ref="chipInput"
           type="text"
           onKeyDown={ this.setKeyWordChips }

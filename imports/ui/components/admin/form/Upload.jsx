@@ -25,7 +25,7 @@ export default class Upload extends React.Component {
               <label for="videoName">Video Name</label>
             </div>
             <div className="input-field col s12">
-              <textarea id="description" className="materialize-textarea"></textarea>
+              <textarea id="description" className="materialize-textarea validate"></textarea>
               <label for="description">Description</label>
             </div>
             <div className="input-field col s12 l12">
