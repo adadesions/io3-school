@@ -8,7 +8,7 @@ const colorNav = {
 const sizeImg = {
   marginLeft: '0.2em',
   marginTop: '0.1em',
-  width: '5em',
+  width: '6em',
   height: 'auto',
 }
 const styleDropdown = {

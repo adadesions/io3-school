@@ -54,8 +54,9 @@ export default class Upload extends React.Component {
     };
 
     return (
-      <select ref="playlist" id="playlist">
-        { generateOption(this.props.playlists) }
+      <select ref="playlist" id="playlist" defaultValue="0">
+        <option value="0" disabled>Choose your option</option>
+        {generateOption(this.props.playlists) }
       </select>
     )
 
@@ -85,10 +86,10 @@ export default class Upload extends React.Component {
             </div>
             <div style={styleDropdown} className="input-field col s12 l6 drop-down">
               <select ref="catagory" defaultValue="0" id="catagory">
-                <option value="0" disabled>Choose your option</option>
-                <option value="1">Option 1</option>
-                <option value="2">Option 2</option>
-                <option value="3">Option 3</option>
+                <option key="0" value="0" disabled>Choose your option</option>
+                <option key="1" value="1">Option 1</option>
+                <option key="2" value="2">Option 2</option>
+                <option key="3" value="3">Option 3</option>
               </select>
               <label>Catagory</label>
             </div>
