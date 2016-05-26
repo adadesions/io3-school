@@ -4,12 +4,16 @@ export default class MenuItemAdmin extends React.Component {
 
   onClickSchool() {
     FlowRouter.go('upload');
+
+    /////Active Tab Menu When Click/////
     const idMenu = document.getElementById("upload-menu");
     idMenu.click()
   }
 
   onClickOverview() {
     FlowRouter.go('overview');
+
+    /////Active Tab Menu When Click/////
     const idMenu = document.getElementById("overview-menu");
     idMenu.click()
   }

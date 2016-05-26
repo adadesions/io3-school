@@ -39,6 +39,10 @@ export default class ContentBankAccount extends React.Component {
     $(document).ready(function() {
       $('select').material_select();
     });
+
+    /////Active Tab Menu When Reflesh/////
+    const idMenu = document.getElementById("buy-me-a-beer");
+    idMenu.click()
   }
 
   render() {
