@@ -1,6 +1,6 @@
 import React from 'react';
 
-/////Components/////
+// Components
 import AdminNavigator from '../ui/components/navBarAdmin/AdminNavigator.jsx';
 import MenuItemAdmin from '../ui/components/admin/MenuItemAdmin.jsx';
 import TabMenuItemAdmin from '../ui/components/admin/TabMenuItemAdmin.jsx';

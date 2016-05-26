@@ -1,5 +1,6 @@
 import React, { PropTypes } from 'react';
 import { Meteor } from 'meteor/meteor';
+import { createContainer } from 'meteor/react-meteor-data';
 
 // Collections
 import { Playlists } from '../../../../apis/models/Playlists.js';
@@ -22,9 +23,6 @@ const itemKeyword = {
 export default class Upload extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      playlists: props.playlists,
-    }
     this.onClickSave = this.onClickSave.bind(this);
     this.renderPlaylists = this.renderPlaylists.bind(this);
   }
@@ -117,7 +115,10 @@ export default class Upload extends React.Component {
   }
 }
 
-
-Upload.propTypes = {
-  playlists: PropTypes.array,
-}
+export default createContainer(() => {
+  const isPlaylistsReady = Meteor.subscribe('allPlaylists');
+  const playlists = Playlists.find().fetch();
+  return {
+    playlists,
+  }
+}, Upload);
