@@ -29,6 +29,16 @@ export default class Upload extends React.Component {
     this.renderPlaylists = this.renderPlaylists.bind(this);
   }
 
+  componentDidMount(){
+    $(document).ready(function(){
+      $('ul.tabs').tabs();
+    });
+
+    $(document).ready(function() {
+      $('select').material_select();
+    });
+  }
+
   onClickSave() {
     const videoName = this.refs.videoName.value;
     const videoLink = this.refs.videoLink.value;
@@ -64,7 +74,7 @@ export default class Upload extends React.Component {
               <label for="videoName">Video Name</label>
             </div>
             <div className="input-field col s12">
-              <textarea ref="description" id="description" className="materialize-textarea"></textarea>
+              <textarea ref="description" id="description" className="materialize-textarea validate"></textarea>
               <label for="description">Description</label>
             </div>
             <div className="input-field col s12 l12">

@@ -29,7 +29,7 @@ export default class Avatar extends React.Component {
   }
 
   onClickAdminSite(){
-    FlowRouter.go('adminSite')
+    FlowRouter.go('upload')
   }
 
   onClickLogOut() {

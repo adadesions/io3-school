@@ -39,6 +39,10 @@ export default class ContentBankAccount extends React.Component {
     $(document).ready(function() {
       $('select').material_select();
     });
+
+    /////Active Tab Menu When Reflesh/////
+    const idMenu = document.getElementById("buy-me-a-beer");
+    idMenu.click()
   }
 
   render() {
@@ -85,10 +89,10 @@ export default class ContentBankAccount extends React.Component {
               <div className="divider"></div>
                 <div className="card-panel">
                   <div className="row valign-wrapper bank-account">
-                    <div className="col m3 tumbnail-bank-account">
+                    <div className="col s2 m2 l3 tumbnail-bank-account">
                       <img className="bank-logo" src="images/mainPage/bank-pic.jpg"/>
                     </div>
-                    <div className="col m9">
+                    <div className="col s10 m10 l9">
                       <span className="black-text text-bank-account">
                         <h5>Bank Name : ธนาคารกสิกรไทย ( Kasikorn Bank ) </h5>
                       </span>

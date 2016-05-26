@@ -37,6 +37,10 @@ class MainPage extends React.Component {
                             Interval: 0.1
                           });
     });
+
+    ///// Active Tab Menu When Reflesh
+    const idMenu = document.getElementById("all-course");
+    idMenu.click()
   }
 
   render() {
