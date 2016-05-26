@@ -20,6 +20,16 @@ export default class Upload extends React.Component {
     this.onClickSave = this.onClickSave.bind(this);
   }
 
+  componentDidMount(){
+    $(document).ready(function(){
+      $('ul.tabs').tabs();
+    });
+
+    $(document).ready(function() {
+      $('select').material_select();
+    });
+  }
+
   onClickSave() {
     const videoName = this.refs.videoName.value;
     const videoLink = this.refs.videoLink.value;

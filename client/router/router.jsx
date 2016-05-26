@@ -12,7 +12,8 @@ import Player from '../../imports/pages/Player.jsx';
 import ContentBankAccount from '../../imports/ui/components/mainPage/rightContent/ContentBankAccount.jsx';
 
 import AdminContainer from '../../imports/layouts/AdminContainer.jsx';
-import AdminSite from '../../imports/pages/admin/AdminSite.jsx';
+import Upload from '../../imports/ui/components/admin/form/Upload.jsx';
+import Overview from '../../imports/ui/components/admin/form/Overview.jsx';
 
 // School Router Section
 
@@ -71,11 +72,20 @@ schoolRouter.route('/player', {
 });
 
 // Admin Router Section
-adminRouter.route('/adminsite', {
-  name: 'adminSite',
+adminRouter.route('/upload', {
+  name: 'upload',
   action() {
     mount(AdminContainer, {
-      content: <AdminSite />,
+      content: <Upload />,
+    });
+  },
+});
+
+adminRouter.route('/overview', {
+  name: 'overview',
+  action() {
+    mount(AdminContainer, {
+      content: <Overview />,
     });
   },
 });
