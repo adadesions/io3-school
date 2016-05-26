@@ -1,4 +1,8 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
+import { Meteor } from 'meteor/meteor';
+
+// Collections
+import { Playlists } from '../../../../apis/models/Playlists.js';
 
 // Components
 import ChipKeyword from '../ChipKeyword.jsx';
@@ -14,19 +18,39 @@ const itemKeyword = {
   marginTop: '3em',
 }
 
+
 export default class Upload extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
+    this.state = {
+      playlists: props.playlists,
+    }
     this.onClickSave = this.onClickSave.bind(this);
+    this.renderPlaylists = this.renderPlaylists.bind(this);
   }
 
   onClickSave() {
     const videoName = this.refs.videoName.value;
     const videoLink = this.refs.videoLink.value;
     const playlist = this.refs.playlist.value;
-
     const keywords = $('#chipOutput').val();
-    console.log(playlist);
+  }
+
+  renderPlaylists() {
+    const generateOption = (playlists) => {
+      return playlists.map( (playlist, index) => {
+        return (
+          <option key={index} value={playlist.playlistName} >{playlist.playlistName}</option>
+        )
+      })
+    };
+
+    return (
+      <select ref="playlist" id="playlist">
+        { generateOption(this.props.playlists) }
+      </select>
+    )
+
   }
 
   render() {
@@ -48,12 +72,7 @@ export default class Upload extends React.Component {
               <label for="videoLink">Video Link</label>
             </div>
             <div style={styleDropdown} className="input-field col s12 l6 drop-down">
-              <select ref="playlist" defaultValue="0" id="playlist">
-                <option value="0" disabled>Choose your option</option>
-                <option value="1">Option 1</option>
-                <option value="2">Option 2</option>
-                <option value="3">Option 3</option>
-              </select>
+              { this.renderPlaylists() }
               <label>Playlist</label>
             </div>
             <div style={styleDropdown} className="input-field col s12 l6 drop-down">
@@ -86,4 +105,9 @@ export default class Upload extends React.Component {
       </div>
     )
   }
+}
+
+
+Upload.propTypes = {
+  playlists: PropTypes.array,
 }

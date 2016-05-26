@@ -1,8 +1,14 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
+import { Meteor } from 'meteor/meteor';
+import { createContainer } from 'meteor/react-meteor-data';
 
+// Collections
+import { Playlists } from '../../apis/models/Playlists.js';
+
+// Components
 import TabMenuItemAdmin from '../../ui/components/admin/TabMenuItemAdmin.jsx';
 import MenuItemAdmin from '../../ui/components/admin/MenuItemAdmin.jsx';
-import Upload from '../../ui/components/admin/form/Upload.jsx'
+import Upload from '../../ui/components/admin/form/Upload.jsx';
 
 const leftContent = {
   marginTop: '-0.2em',
@@ -32,7 +38,12 @@ const styleHeader = {
   margin: '0px',
   marginBottom: '0.25em',
 }
-export default class AdminSite extends React.Component {
+
+class AdminSite extends React.Component {
+  constructor(props) {
+    super(props);
+  }
+
   componentDidMount(){
     $(document).ready(function(){
       $('ul.tabs').tabs();
@@ -42,6 +53,7 @@ export default class AdminSite extends React.Component {
       $('select').material_select();
     });
   }
+
   render() {
     return (
       <div className="row admin-site">
@@ -60,7 +72,7 @@ export default class AdminSite extends React.Component {
               </ul>
               </div>
             <div style={styleRow} className="row">
-              <Upload />
+              <Upload playlists={this.props.playlists} />
             </div>
           </div>
         </div>
@@ -68,3 +80,12 @@ export default class AdminSite extends React.Component {
     )
   }
 }
+
+export default createContainer(() => {
+  const isPlaylistsReady = Meteor.subscribe('allPlaylists').ready();
+  playlists = Playlists.find().fetch();
+  console.log(playlists);
+  return {
+    playlists,
+  }
+}, AdminSite);
