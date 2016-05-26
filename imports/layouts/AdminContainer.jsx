@@ -35,8 +35,6 @@ const styleHeader = {
 }
 
 export default class AdminContainer extends React.Component{
-  // mixins: [ReactMeteorData],
-
   render(){
     return(
       <div>
