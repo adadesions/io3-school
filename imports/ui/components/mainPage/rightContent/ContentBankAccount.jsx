@@ -13,7 +13,7 @@ const styleRow = {
   marginRight: 'none',
 }
 const container = {
-  width:'80%',
+  width:'90%',
   backgroundColor: '#fff',
   padding: '1em',
 }

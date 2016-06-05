@@ -25,5 +25,5 @@ accounts-password
 session
 poetic:materialize-scss
 semantic:ui-popup
-semantic:ui-transition
 aldeed:simple-schema
+semantic:ui-transition

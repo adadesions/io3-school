@@ -64,7 +64,7 @@ export default class Avatar extends React.Component {
             <div>
               <a style={styButton}>Profile (Comming Soon)</a>
               <hr/>
-              <a onClick={this.onClickAdminSite} style={styButton}>Admin Site</a>
+              <a onClick={this.onClickAdminSite} href="" style={styButton}>Admin Site</a>
               <hr/>
               <a onClick={ this.onClickLogOut } style={styButton}>Logout</a>
               <hr/>

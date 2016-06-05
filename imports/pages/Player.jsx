@@ -38,7 +38,7 @@ const styleRelates = {
   boxShadow: '0px 0px 2px 0px rgba(189,187,189,1)',
 }
 const styleRow = {
-  backgroundColor: '#F1F1F1',
+  backgroundColor: '#fefdf0',
 }
 const styleFontRelates = {
   fontWeight: 'bold',
